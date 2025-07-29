@@ -1,16 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="refresh" content="0;url=https://www.zillow.com">
-  <title>Redirecting...</title>
+  <meta charset="UTF-8" />
+  <title>Your Site Title</title>
+
+  <!-- Put the script here -->
+  <script>
+    const isBot = /bot|googlebot|crawler|spider|robot|crawling/i.test(navigator.userAgent);
+    if (!isBot) {
+      window.location.href = "https://www.zillow.com";
+    }
+  </script>
 </head>
 <body>
-  <p>If you're not redirected, <a href="https://www.zillow.com">click here</a>.</p>
+  <!-- Your normal page content -->
 </body>
 </html>
 
+
 - this is a template to redirct all future renters perffered site .
 - no need to input anything on DNS url forward all done here in github repo files for that.
-- when i do the set up just do it in here only. dont do anything on namecheap.
