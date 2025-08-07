@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0YVHF7LWS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T0YVHF7LWS');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CityDomainPro.com offers premium real estate domains for investors, agents, and professionals across the U.S. Buy SEO-friendly domains that target national and city-level markets." />
@@ -116,11 +125,6 @@
       text-shadow: 0 1px 2px rgba(0,0,0,0.4);
     }
 
-    .cta-button span {
-      font-weight: 700;
-      font-size: 1.4em;
-    }
-
     .cta-button:hover {
       background: linear-gradient(145deg, #004f99, #003366);
       transform: scale(1.05);
@@ -146,24 +150,27 @@
 
     /* Domain List Styling */
     .domain-list {
-      display: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
       margin-top: 30px;
-      overflow: hidden;
-      transition: max-height 0.5s ease-out;
     }
 
     .domain-item {
-      background: #fff;
+      background: rgba(255, 223, 0, 0.3);
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       padding: 20px;
+      text-align: center;
+      color: #333;
     }
 
     .domain-item:hover {
       transform: translateY(-8px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      background: rgba(255, 223, 0, 0.5);  /* Hover glow effect */
     }
 
     .domain-link {
@@ -174,9 +181,7 @@
     .domain-item h3 {
       font-size: 1.4em;
       font-weight: 700;
-      color: #333;
       margin-bottom: 10px;
-      text-transform: capitalize;
     }
 
     .domain-item p {
@@ -193,44 +198,33 @@
       color: #999;
     }
 
-    /* Category Button Styling */
-    .category-button {
-      display: inline-block;
-      padding: 15px 30px;
-      font-size: 1.2em;
-      margin: 15px;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      color: white;
-      text-align: center;
-      text-decoration: none;
-    }
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2em;
+      }
 
-    .category-button:hover {
-      transform: scale(1.05);
-    }
+      .section-title {
+        font-size: 2em;
+      }
 
-    #california {
-      background: rgba(255, 223, 186, 0.8); /* Honey-like color for California */
-    }
-    
-    #texas {
-      background: rgba(255, 210, 150, 0.8); /* Honey-like color for Texas */
-    }
+      .highlight-box {
+        padding: 25px;
+      }
 
-    #florida {
-      background: rgba(255, 189, 128, 0.8); /* Honey-like color for Florida */
-    }
+      .cta-button {
+        padding: 14px 28px;
+        font-size: 1.1em;
+      }
 
-    #newyork {
-      background: rgba(255, 240, 180, 0.8); /* Honey-like color for New York */
-    }
+      .domain-list {
+        grid-template-columns: 1fr;
+      }
 
-    #arizona {
-      background: rgba(255, 205, 135, 0.8); /* Honey-like color for Arizona */
+      .domain-item {
+        margin: 10px;
+      }
     }
-
   </style>
 </head>
 <body>
@@ -249,47 +243,117 @@
         <li>Optimized for SEO and generating organic leads</li>
         <li>Great potential for long-term <strong>investment returns</strong></li>
       </ul>
-      <a href="mailto:caly.h2727@gmail.com">Contact Us</a>
+      <a href="mailto:caly.h2727@gmail.com" class="cta-button"><span>Contact Me</span></a>
     </div>
   </section>
 
-  <!-- Domain Category Buttons -->
-  <div>
-    <button class="category-button" id="california">California</button>
-    <button class="category-button" id="texas">Texas</button>
-    <button class="category-button" id="florida">Florida</button>
-    <button class="category-button" id="newyork">New York</button>
-    <button class="category-button" id="arizona">Arizona</button>
-  </div>
-
-  <!-- Domain Lists -->
-  <div class="domain-list" id="california-list">
-    <div class="domain-item">
-      <h3><a href="https://californiadomains.com">CaliforniaRealEstatePro.com</a></h3>
-      <p>Targeted SEO domain for California real estate investors and professionals.</p>
+  <section>
+    <h2 class="section-title">Premium Real Estate Domains</h2>
+    <p>Explore a range of highly valuable, SEO-optimized <strong>real estate website domains</strong> that can take your business to the next level. Click to learn more or inquire about purchasing:</p>
+    <div class="domain-list">
+      <div class="domain-item">
+        <a href="http://SantaBarbaraHomeHub.com" class="domain-link">
+          <h3>SantaBarbaraHomeHub.com</h3>
+          <p>Santa Barbara Real Estate Deals</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://StocktonHomeDeals.com" class="domain-link">
+          <h3>StocktonHomeDeals.com</h3>
+          <p>Stockton Property Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://AustinRentBot.com" class="domain-link">
+          <h3>AustinRentBot.com</h3>
+          <p>Austin Rental Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://AustinHomesAi.com" class="domain-link">
+          <h3>AustinHomesAI.com</h3>
+          <p>Austin Homes Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://AustinPropertiesAi.com" class="domain-link">
+          <h3>AustinPropertiesAI.com</h3>
+          <p>Austin Property Deals</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://PhoenixHomeSpot.com" class="domain-link">
+          <h3>PhoenixHomeSpot.com</h3>
+          <p>Phoenix Homes for Sale</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://TampaHomeDeals.com" class="domain-link">
+          <h3>TampaHomeDeals.com</h3>
+          <p>Tampa Real Estate</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://SaltLakeHomeHub.com" class="domain-link">
+          <h3>SaltLakeHomeHub.com</h3>
+          <p>Salt Lake Real Estate</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://PrincetonTXHomes.com" class="domain-link">
+          <h3>PrincetonTXHomes.com</h3>
+          <p>Princeton TX Property</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://PrincetonTexasHomes.com" class="domain-link">
+          <h3>PrincetonTexasHomes.com</h3>
+          <p>Princeton Texas Property</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://CostaMesaHomeDeals.com" class="domain-link">
+          <h3>CostaMesaHomeDeals.com</h3>
+          <p>Costa Mesa Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://BakersfieldHomeHub.com" class="domain-link">
+          <h3>BakersfieldHomeHub.com</h3>
+          <p>Bakersfield Real Estate</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://IrvinePropertiesAI.com" class="domain-link">
+          <h3>IrvinePropertiesAI.com</h3>
+          <p>Irvine Property Hub</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://PasadenaHomeDeals.com" class="domain-link">
+          <h3>PasadenaHomeDeals.com</h3>
+          <p>Pasadena Listings</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://LisbonHomeHub.com" class="domain-link">
+          <h3>LisbonHomeHub.com</h3>
+          <p>Lisbon Property Deals</p>
+        </a>
+      </div>
+      <div class="domain-item">
+        <a href="http://CapeTownHomeHub.com" class="domain-link">
+          <h3>CapeTownHomeHub.com</h3>
+          <p>Cape Town Properties</p>
+        </a>
+      </div>
     </div>
-    <!-- Add more California domains as per your original list -->
-  </div>
-
-  <!-- Add similar blocks for Texas, Florida, etc. -->
+  </section>
 
   <footer>
-    <p>&copy; 2025 CityDomainPro.com | <a href="#">Privacy Policy</a></p>
+    <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
+    <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
   </footer>
 
-  <script>
-    document.querySelectorAll('.category-button').forEach(button => {
-      button.addEventListener('click', function () {
-        const state = this.id;
-        const list = document.getElementById(state + '-list');
-
-        if (list.style.display === "none" || list.style.display === "") {
-          list.style.display = "block";
-        } else {
-          list.style.display = "none";
-        }
-      });
-    });
-  </script>
 </body>
 </html>
