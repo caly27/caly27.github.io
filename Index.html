@@ -1,48 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transparent Buttons</title>
-    <style>
-        /* General button style */
-        .btn {
-            padding: 10px 20px;
-            border: 2px solid transparent;  /* Border is transparent */
-            border-radius: 5px;
-            font-size: 16px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;  /* Smooth transition for hover effect */
-        }
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0YVHF7LWS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-        /* Button color with transparent background */
-        .btn-red {
-            background-color: rgba(255, 0, 0, 0.3);  /* Red with 30% opacity */
-            color: black;
-        }
-        .btn-blue {
-            background-color: rgba(0, 0, 255, 0.3);  /* Blue with 30% opacity */
-            color: black;
-        }
-        .btn-green {
-            background-color: rgba(0, 255, 0, 0.3);  /* Green with 30% opacity */
-            color: black;
-        }
+    gtag('config', 'G-T0YVHF7LWS');
+  </script>
 
-        /* Hover effect */
-        .btn:hover {
-            opacity: 1;  /* Make the button solid on hover */
-            transform: scale(1.1);  /* Slightly increase the size */
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CityDomainPro.com offers premium real estate domains for investors, agents, and professionals across the U.S. Buy SEO-friendly domains that target national and city-level markets." />
+  <meta name="keywords" content="buy real estate domains, real estate SEO domains, premium domains for real estate, domain leasing for realtors, national real estate domains, top real estate domains, domain names for property investors, SEO domains for realtors, best real estate domains nationwide, buy SEO domains for realtors, national real estate websites" />
+  <meta name="author" content="Carlos" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="City Domain Pro — Premium Real Estate Domains" />
+  <meta property="og:description" content="Explore premium real estate domains for investment opportunities and professional growth, from national domains to city-specific listings." />
+  <meta property="og:image" content="image.jpg" />
+  <meta property="og:url" content="https://CityDomainPro.com" />
+  <title>CityDomainPro.com — Premium Real Estate Domains for Agents & Investors</title>
+
+  <style>
+    /* Universal reset */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Body Setup */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f8fa;
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* Header Section */
+    header {
+      background: linear-gradient(135deg, #2E3A59, #1A2538);
+      color: white;
+      padding: 80px 20px;
+      text-align: left;
+      border-bottom: 4px solid #1a2538;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3em;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+
+    /* Section Titles */
+    .section-title {
+      font-size: 2.8em;
+      text-align: center;
+      color: #0066cc;
+      margin: 40px 0;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+
+    /* Buttons for state categories */
+    .button-container {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #f8a631;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      margin: 5px;
+    }
+
+    .btn:hover {
+      background-color: #d78c27;
+      transform: scale(1.05);
+    }
+
+    /* Domain List Styling */
+    .domain-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .domain-item {
+      padding: 20px;
+      border-radius: 8px;
+      color: white;
+      background: rgba(255, 165, 0, 0.3); /* Honey-like color */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .domain-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      background: rgba(255, 255, 255, 0.2); /* Slight white glow on hover */
+    }
+
+    .domain-link {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .domain-item h3 {
+      font-size: 1.4em;
+      font-weight: 700;
+      margin-bottom: 10px;
+      text-transform: capitalize;
+    }
+
+    .domain-item p {
+      font-size: 1.1em;
+      margin-bottom: 10px;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      .section-title {
+        font-size: 2em;
+      }
+
+      .domain-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- Buttons with different colors -->
-    <button class="btn btn-red">Red Button</button>
-    <button class="btn btn-blue">Blue Button</button>
-    <button class="btn btn-green">Green Button</button>
+  <header>
+    <h1>CityDomainPro.com — Premium Real Estate Domains</h1>
+    <p>Your hub for top-tier real estate domains and investment opportunities nationwide, from New York to Los Angeles, Miami, and beyond</p>
+  </header>
+
+  <!-- Buttons for state categories -->
+  <div class="button-container">
+    <button class="btn" onclick="showSites('new-york')">New York</button>
+    <button class="btn" onclick="showSites('california')">California</button>
+    <button class="btn" onclick="showSites('texas')">Texas</button>
+    <button class="btn" onclick="showSites('florida')">Florida</button>
+  </div>
+
+  <section>
+    <h2 class="section-title">Premium Real Estate Domains</h2>
+    <div class="domain-list">
+      <!-- New York Domains -->
+      <div id="new-york" class="domain-item">
+        <a href="http://SantaBarbaraHomeHub.com" class="domain-link">
+          <h3>SantaBarbaraHomeHub.com</h3>
+          <p>Santa Barbara Real Estate Deals</p>
+        </a>
+      </div>
+      
+      <!-- California Domains -->
+      <div id="california" class="domain-item">
+        <a href="http://StocktonHomeDeals.com" class="domain-link">
+          <h3>StocktonHomeDeals.com</h3>
+          <p>Stockton Property Listings</p>
+        </a>
+      </div>
+
+      <!-- Texas Domains -->
+      <div id="texas" class="domain-item">
+        <a href="http://AustinRentBot.com" class="domain-link">
+          <h3>AustinRentBot.com</h3>
+          <p>Austin Rental Listings</p>
+        </a>
+      </div>
+
+      <!-- Florida Domains -->
+      <div id="florida" class="domain-item">
+        <a href="http://PhoenixHomeSpot.com" class="domain-link">
+          <h3>PhoenixHomeSpot.com</h3>
+          <p>Phoenix Homes for Sale</p>
+        </a>
+      </div>
+      <!-- Add more domain items here as necessary -->
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
+    <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
+  </footer>
+
+  <script>
+    // Function to show sites for the selected category
+    function showSites(state) {
+      // Hide all domain sites
+      const allSites = document.querySelectorAll('.domain-item');
+      allSites.forEach(site => site.style.display = 'none');
+
+      // Show the selected state domains
+      const stateSites = document.querySelectorAll(`#${state}`);
+      stateSites.forEach(site => site.style.display = 'block');
+    }
+  </script>
 
 </body>
 </html>
