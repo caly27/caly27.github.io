@@ -74,27 +74,84 @@
       letter-spacing: 1.5px;
     }
 
-    /* Buttons for state categories */
-    .button-container {
-      text-align: center;
-      margin-bottom: 20px;
+    /* Highlight Box */
+    .highlight-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      margin-bottom: 50px;
+      transition: transform 0.3s ease;
     }
 
-    .btn {
-      background-color: #f8a631;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 18px;
-      transition: all 0.3s ease;
-      margin: 5px;
+    .highlight-box:hover {
+      transform: translateY(-8px);
     }
 
-    .btn:hover {
-      background-color: #d78c27;
+    .highlight-box ul {
+      padding-left: 20px;
+    }
+
+    .highlight-box ul li {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .highlight-box a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .highlight-box a:hover {
+      color: #d6336c;
+    }
+
+    /* Call-to-Action Button */
+    .cta-button {
+      background: linear-gradient(145deg, #0066cc, #004f99);
+      color: #fff !important; /* force pure white */
+      padding: 18px 35px;
+      border-radius: 6px;
+      font-size: 1.3em;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid #004f99;
+      transition: background 0.3s ease, transform 0.3s ease;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4); /* subtle shadow for contrast */
+    }
+
+    .cta-button span {
+      font-weight: 700;
+      font-size: 1.4em;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(145deg, #004f99, #003366);
       transform: scale(1.05);
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #1A2538;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
     }
 
     /* Domain List Styling */
@@ -106,19 +163,18 @@
     }
 
     .domain-item {
-      padding: 20px;
+      background: rgba(255, 165, 0, 0.3); /* Honey translucent */
       border-radius: 8px;
-      color: white;
-      background: rgba(255, 165, 0, 0.3); /* Honey-like color */
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+      padding: 20px;
     }
 
     .domain-item:hover {
       transform: translateY(-8px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      background: rgba(255, 255, 255, 0.2); /* Slight white glow on hover */
+      background: rgba(255, 165, 0, 0.5); /* Slightly brighter on hover */
     }
 
     .domain-link {
@@ -129,13 +185,42 @@
     .domain-item h3 {
       font-size: 1.4em;
       font-weight: 700;
+      color: #333;
       margin-bottom: 10px;
       text-transform: capitalize;
+      word-wrap: break-word;
     }
 
     .domain-item p {
       font-size: 1.1em;
+      color: #666;
       margin-bottom: 10px;
+    }
+
+    .domain-link:hover h3 {
+      color: #0066cc;
+    }
+
+    .domain-link:hover p {
+      color: #999;
+    }
+
+    /* Buttons for State Filtering */
+    .state-button {
+      background: #0066cc;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      text-transform: uppercase;
+      margin: 5px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .state-button:hover {
+      background: #004f99;
     }
 
     /* Mobile Responsiveness */
@@ -148,8 +233,21 @@
         font-size: 2em;
       }
 
+      .highlight-box {
+        padding: 25px;
+      }
+
+      .cta-button {
+        padding: 14px 28px;
+        font-size: 1.1em;
+      }
+
       .domain-list {
         grid-template-columns: 1fr;
+      }
+
+      .domain-item {
+        margin: 10px;
       }
     }
   </style>
@@ -161,69 +259,139 @@
     <p>Your hub for top-tier real estate domains and investment opportunities nationwide, from New York to Los Angeles, Miami, and beyond</p>
   </header>
 
-  <!-- Buttons for state categories -->
-  <div class="button-container">
-    <button class="btn" onclick="showSites('new-york')">New York</button>
-    <button class="btn" onclick="showSites('california')">California</button>
-    <button class="btn" onclick="showSites('texas')">Texas</button>
-    <button class="btn" onclick="showSites('florida')">Florida</button>
-  </div>
+  <section>
+    <h2 class="section-title">Why Choose <span class="nowrap">CityDomainPro.com</span>?</h2>
+    <div class="highlight-box">
+      <p><strong>CityDomainPro.com</strong> offers a curated selection of <strong>premium real estate domains</strong> tailored for both national and city-specific real estate professionals. Whether you're looking to dominate the **New York** market or expand across the country, we have the perfect SEO-friendly domains for your real estate business.</p>
+      <ul>
+        <li>Highly SEO-optimized domains for real estate professionals</li>
+        <li>Available for purchase or leasing</li>
+        <li>Perfect for real estate agents, investors, and developers</li>
+        <li>Covering key markets across the U.S., from Florida to California</li>
+      </ul>
+      <a href="#contact-form" class="cta-button"><span>Contact Us Today!</span></a>
+    </div>
+  </section>
 
+  <!-- Bottom Section - Domain Sites -->
   <section>
     <h2 class="section-title">Premium Real Estate Domains</h2>
+    <p>Explore a range of highly valuable, SEO-optimized <strong>real estate website domains</strong> that can take your business to the next level. Click to learn more or inquire about purchasing:</p>
+    
+    <!-- Buttons to filter by state -->
+    <div>
+      <button class="state-button" onclick="filterDomains('California')">California</button>
+      <button class="state-button" onclick="filterDomains('Texas')">Texas</button>
+      <button class="state-button" onclick="filterDomains('Florida')">Florida</button>
+      <button class="state-button" onclick="filterDomains('New York')">New York</button>
+      <button class="state-button" onclick="filterDomains('Arizona')">Arizona</button>
+      <!-- Add more state buttons as needed -->
+    </div>
+
+    <!-- Domain List -->
     <div class="domain-list">
-      <!-- New York Domains -->
-      <div id="new-york" class="domain-item">
+      <!-- California Domains -->
+      <div class="domain-item california">
         <a href="http://SantaBarbaraHomeHub.com" class="domain-link">
           <h3>SantaBarbaraHomeHub.com</h3>
           <p>Santa Barbara Real Estate Deals</p>
         </a>
       </div>
-      
-      <!-- California Domains -->
-      <div id="california" class="domain-item">
+      <div class="domain-item california">
         <a href="http://StocktonHomeDeals.com" class="domain-link">
           <h3>StocktonHomeDeals.com</h3>
           <p>Stockton Property Listings</p>
         </a>
       </div>
-
+      <div class="domain-item california">
+        <a href="http://CostaMesaHomeDeals.com" class="domain-link">
+          <h3>CostaMesaHomeDeals.com</h3>
+          <p>Costa Mesa Listings</p>
+        </a>
+      </div>
+      <div class="domain-item california">
+        <a href="http://BakersfieldHomeHub.com" class="domain-link">
+          <h3>BakersfieldHomeHub.com</h3>
+          <p>Bakersfield Real Estate</p>
+        </a>
+      </div>
       <!-- Texas Domains -->
-      <div id="texas" class="domain-item">
+      <div class="domain-item texas">
         <a href="http://AustinRentBot.com" class="domain-link">
           <h3>AustinRentBot.com</h3>
           <p>Austin Rental Listings</p>
         </a>
       </div>
-
+      <div class="domain-item texas">
+        <a href="http://AustinHomesAi.com" class="domain-link">
+          <h3>AustinHomesAI.com</h3>
+          <p>Austin Homes Listings</p>
+        </a>
+      </div>
+      <div class="domain-item texas">
+        <a href="http://AustinPropertiesAi.com" class="domain-link">
+          <h3>AustinPropertiesAI.com</h3>
+          <p>Austin Property Deals</p>
+        </a>
+      </div>
+      <div class="domain-item texas">
+        <a href="http://PrincetonTXHomes.com" class="domain-link">
+          <h3>PrincetonTXHomes.com</h3>
+          <p>Princeton TX Property</p>
+        </a>
+      </div>
       <!-- Florida Domains -->
-      <div id="florida" class="domain-item">
+      <div class="domain-item florida">
+        <a href="http://TampaHomeDeals.com" class="domain-link">
+          <h3>TampaHomeDeals.com</h3>
+          <p>Tampa Real Estate</p>
+        </a>
+      </div>
+      <div class="domain-item florida">
+        <a href="http://MiamiHomeSpot.com" class="domain-link">
+          <h3>MiamiHomeSpot.com</h3>
+          <p>Miami Real Estate</p>
+        </a>
+      </div>
+      <!-- New York Domains -->
+      <div class="domain-item newyork">
+        <a href="http://NYCRealEstateDeals.com" class="domain-link">
+          <h3>NYCRealEstateDeals.com</h3>
+          <p>New York City Real Estate</p>
+        </a>
+      </div>
+      <!-- Arizona Domains -->
+      <div class="domain-item arizona">
         <a href="http://PhoenixHomeSpot.com" class="domain-link">
           <h3>PhoenixHomeSpot.com</h3>
           <p>Phoenix Homes for Sale</p>
         </a>
       </div>
-      <!-- Add more domain items here as necessary -->
+      <div class="domain-item arizona">
+        <a href="http://SaltLakeHomeHub.com" class="domain-link">
+          <h3>SaltLakeHomeHub.com</h3>
+          <p>Salt Lake Real Estate</p>
+        </a>
+      </div>
     </div>
   </section>
 
-  <footer>
-    <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
-    <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
-  </footer>
-
+  <!-- JS to Filter Domains by State -->
   <script>
-    // Function to show sites for the selected category
-    function showSites(state) {
-      // Hide all domain sites
-      const allSites = document.querySelectorAll('.domain-item');
-      allSites.forEach(site => site.style.display = 'none');
-
-      // Show the selected state domains
-      const stateSites = document.querySelectorAll(`#${state}`);
-      stateSites.forEach(site => site.style.display = 'block');
+    function filterDomains(state) {
+      // Hide all domain items
+      const allDomains = document.querySelectorAll('.domain-item');
+      allDomains.forEach(item => item.style.display = 'none');
+      
+      // Show only the domains for the selected state
+      const filteredDomains = document.querySelectorAll('.' + state.toLowerCase());
+      filteredDomains.forEach(item => item.style.display = 'block');
     }
   </script>
+
+  <footer>
+    <p>© 2025 CityDomainPro.com. All Rights Reserved. <br> Built by <a href="#">Carlos</a>.</p>
+  </footer>
 
 </body>
 </html>
