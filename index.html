@@ -112,7 +112,7 @@
     /* Call-to-Action Button */
     .cta-button {
       background: linear-gradient(145deg, #0066cc, #004f99);
-      color: #fff !important; /* force pure white */
+      color: #fff !important;
       padding: 18px 35px;
       border-radius: 6px;
       font-size: 1.3em;
@@ -123,7 +123,7 @@
       letter-spacing: 1px;
       border: 2px solid #004f99;
       transition: background 0.3s ease, transform 0.3s ease;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.4); /* subtle shadow for contrast */
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
     }
 
     .cta-button span {
@@ -164,22 +164,102 @@
     }
 
     .category-button {
-      background: #FFC107;
       border: none;
       border-radius: 30px;
       padding: 10px 25px;
-      color: #4B2E00;
       font-weight: 700;
       font-size: 1.1em;
       cursor: pointer;
-      box-shadow: 0 0 15px #d9a50e;
+      box-shadow:
+        inset 0 3px 8px rgba(255, 255, 255, 0.7),
+        0 4px 10px rgba(0, 0, 0, 0.2);
       transition: box-shadow 0.3s ease, transform 0.3s ease;
       user-select: none;
+      position: relative;
+      overflow: hidden;
+      color: #4B2E00; /* text color */
+    }
+
+    /* Different base colors for each button */
+    .category-button[data-target="california"] {
+      background: linear-gradient(145deg, #FFC107, #E6B800);
+      box-shadow:
+        inset 0 3px 8px rgba(255, 255, 255, 0.8),
+        0 4px 12px rgba(217, 165, 14, 0.8);
+    }
+
+    .category-button[data-target="texas"] {
+      background: linear-gradient(145deg, #FF7043, #E64A19);
+      box-shadow:
+        inset 0 3px 8px rgba(255, 255, 255, 0.7),
+        0 4px 12px rgba(230, 74, 25, 0.8);
+    }
+
+    .category-button[data-target="florida"] {
+      background: linear-gradient(145deg, #4FC3F7, #0288D1);
+      box-shadow:
+        inset 0 3px 8px rgba(255, 255, 255, 0.6),
+        0 4px 12px rgba(2, 136, 209, 0.8);
+    }
+
+    .category-button[data-target="arizona"] {
+      background: linear-gradient(145deg, #81C784, #388E3C);
+      box-shadow:
+        inset 0 3px 8px rgba(255, 255, 255, 0.5),
+        0 4px 12px rgba(56, 142, 60, 0.8);
+    }
+
+    .category-button[data-target="utah"] {
+      background: linear-gradient(145deg, #BA68C8, #7B1FA2);
+      box-shadow:
+        inset 0 3px 8px rgba(255, 255, 255, 0.7),
+        0 4px 12px rgba(123, 31, 162, 0.8);
+    }
+
+    .category-button[data-target="international"] {
+      background: linear-gradient(145deg, #FF8A65, #D84315);
+      box-shadow:
+        inset 0 3px 8px rgba(255, 255, 255, 0.7),
+        0 4px 12px rgba(216, 67, 21, 0.8);
+    }
+
+    /* Shiny gloss animation */
+    .category-button::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(
+        circle at 30% 30%,
+        rgba(255, 255, 255, 0.35),
+        rgba(255, 255, 255, 0) 70%
+      );
+      transform: rotate(25deg);
+      pointer-events: none;
+      animation: shineMove 3.5s infinite;
+      border-radius: 30px;
+      mix-blend-mode: screen;
+    }
+
+    @keyframes shineMove {
+      0% {
+        transform: translateX(-100%) rotate(25deg);
+      }
+      50% {
+        transform: translateX(100%) rotate(25deg);
+      }
+      100% {
+        transform: translateX(-100%) rotate(25deg);
+      }
     }
 
     .category-button:hover {
-      box-shadow: 0 0 25px #ffca28;
-      transform: scale(1.05);
+      box-shadow:
+        inset 0 5px 15px rgba(255, 255, 255, 0.9),
+        0 6px 18px rgba(0, 0, 0, 0.4);
+      transform: scale(1.07);
     }
 
     /* Domain List Styling */
@@ -199,163 +279,149 @@
       animation: slideDown 0.4s ease forwards;
     }
 
-    .domain-item {
-      margin-bottom: 12px;
-      font-weight: 600;
-      font-size: 1.2em;
-      color: #4B2E00;
-    }
-
-    .domain-item a {
-      text-decoration: none;
-      color: #4B2E00;
-      transition: color 0.3s ease;
-    }
-
-    .domain-item a:hover {
-      color: #FFA000;
-      text-shadow: 0 0 5px #ffb300;
+    .domain-group.active {
+      display: block;
     }
 
     @keyframes slideDown {
-      0% {
+      from {
         opacity: 0;
-        max-height: 0;
+        transform: translateY(-15px);
       }
-      100% {
+      to {
         opacity: 1;
-        max-height: 1000px;
+        transform: translateY(0);
       }
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2.2em;
-      }
-
-      .section-title {
-        font-size: 2em;
-      }
-
-      .highlight-box {
-        padding: 25px;
-      }
-
-      .cta-button {
-        padding: 14px 28px;
-        font-size: 1.1em;
-      }
-
-      .category-buttons {
-        flex-direction: column;
-        gap: 12px;
-      }
-
-      .domain-list {
-        max-width: 100%;
-        padding: 0 10px;
-      }
+    .domain-group ul {
+      list-style-type: disc;
+      padding-left: 20px;
     }
+
+    .domain-group ul li {
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #444;
+    }
+
   </style>
 </head>
-<body>
 
+<body>
   <header>
-    <h1>CityDomainPro.com — Premium Real Estate Domains</h1>
-    <p>Your hub for top-tier real estate domains and investment opportunities nationwide, from New York to Los Angeles, Miami, and beyond</p>
+    <h1>CityDomainPro.com</h1>
+    <p>Premium real estate domains for agents, investors & professionals</p>
   </header>
 
-  <section>
-    <h2 class="section-title">Why Choose <span class="nowrap">CityDomainPro.com</span>?</h2>
+  <main>
+    <h2 class="section-title">Premium real estate domains nationwide</h2>
     <div class="highlight-box">
-      <p><strong>CityDomainPro.com</strong> offers a curated selection of <strong>premium real estate domains</strong> tailored for both national and city-specific real estate professionals. Whether you're looking to dominate the **New York** market or expand across the country, we have the perfect SEO-friendly domains for your real estate business.</p>
       <ul>
-        <li>Highly brandable and memorable <strong>real estate domain names</strong></li>
-        <li>Optimized for SEO and generating organic leads</li>
-        <li>Great potential for long-term <strong>investment returns</strong></li>
+        <li>Own SEO-friendly, keyword-rich real estate domains to boost your online presence</li>
+        <li>Specializing in <strong>national and city-level domains</strong> covering major U.S. markets</li>
+        <li>Available for <em>purchase or leasing</em> to real estate professionals</li>
+        <li>Expand your brand with memorable domains like <a href="https://example.com">CityDomainPro.com</a></li>
+        <li><strong>Invest smart</strong> in digital real estate assets with high search volume potential</li>
       </ul>
-      <a href="mailto:caly.h2727@gmail.com" class="cta-button"><span>Contact Me</span></a>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Premium Real Estate Domains</h2>
-
-    <div class="category-buttons">
-      <button class="category-button" data-target="california">California</button>
-      <button class="category-button" data-target="texas">Texas</button>
-      <button class="category-button" data-target="florida">Florida</button>
-      <button class="category-button" data-target="arizona">Arizona</button>
-      <button class="category-button" data-target="utah">Utah</button>
-      <button class="category-button" data-target="international">International</button>
+      <a class="cta-button" href="mailto:info@citydomainpro.com">
+        <span>Contact Us to Buy or Lease</span>
+      </a>
     </div>
 
-    <div class="domain-list">
+    <!-- Category Buttons -->
+    <div class="category-buttons" role="navigation" aria-label="Select domain category">
+      <button class="category-button" data-target="california" aria-pressed="false">California Domains</button>
+      <button class="category-button" data-target="texas" aria-pressed="false">Texas Domains</button>
+      <button class="category-button" data-target="florida" aria-pressed="false">Florida Domains</button>
+      <button class="category-button" data-target="arizona" aria-pressed="false">Arizona Domains</button>
+      <button class="category-button" data-target="utah" aria-pressed="false">Utah Domains</button>
+      <button class="category-button" data-target="international" aria-pressed="false">International Domains</button>
+    </div>
 
+    <!-- Domains List -->
+    <section class="domain-list">
       <div class="domain-group" id="california">
-        <div class="domain-item"><a href="http://SantaBarbaraHomeHub.com" target="_blank" rel="noopener noreferrer">SantaBarbaraHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://StocktonHomeDeals.com" target="_blank" rel="noopener noreferrer">StocktonHomeDeals.com</a></div>
-        <div class="domain-item"><a href="http://CostaMesaHomeDeals.com" target="_blank" rel="noopener noreferrer">CostaMesaHomeDeals.com</a></div>
-        <div class="domain-item"><a href="http://BakersfieldHomeHub.com" target="_blank" rel="noopener noreferrer">BakersfieldHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://IrvinePropertiesAI.com" target="_blank" rel="noopener noreferrer">IrvinePropertiesAI.com</a></div>
-        <div class="domain-item"><a href="http://PasadenaHomeDeals.com" target="_blank" rel="noopener noreferrer">PasadenaHomeDeals.com</a></div>
+        <ul>
+          <li>CaliforniaHomes.com</li>
+          <li>CaliforniaRealEstate.com</li>
+          <li>CAPropertyDeals.com</li>
+          <li>BayAreaRealty.com</li>
+        </ul>
       </div>
-
       <div class="domain-group" id="texas">
-        <div class="domain-item"><a href="http://AustinRentBot.com" target="_blank" rel="noopener noreferrer">AustinRentBot.com</a></div>
-        <div class="domain-item"><a href="http://AustinHomesAi.com" target="_blank" rel="noopener noreferrer">AustinHomesAI.com</a></div>
-        <div class="domain-item"><a href="http://AustinPropertiesAi.com" target="_blank" rel="noopener noreferrer">AustinPropertiesAI.com</a></div>
-        <div class="domain-item"><a href="http://PrincetonTXHomes.com" target="_blank" rel="noopener noreferrer">PrincetonTXHomes.com</a></div>
-        <div class="domain-item"><a href="http://PrincetonTexasHomes.com" target="_blank" rel="noopener noreferrer">PrincetonTexasHomes.com</a></div>
+        <ul>
+          <li>TexasLandSales.com</li>
+          <li>HoustonRealEstate.com</li>
+          <li>DallasProperty.com</li>
+          <li>TexasHomeDeals.com</li>
+        </ul>
       </div>
-
       <div class="domain-group" id="florida">
-        <div class="domain-item"><a href="http://TampaHomeDeals.com" target="_blank" rel="noopener noreferrer">TampaHomeDeals.com</a></div>
+        <ul>
+          <li>FloridaBeachHomes.com</li>
+          <li>MiamiProperty.com</li>
+          <li>OrlandoRealEstate.com</li>
+          <li>SunshineStateHomes.com</li>
+        </ul>
       </div>
-
       <div class="domain-group" id="arizona">
-        <div class="domain-item"><a href="http://PhoenixHomeSpot.com" target="_blank" rel="noopener noreferrer">PhoenixHomeSpot.com</a></div>
+        <ul>
+          <li>PhoenixRealty.com</li>
+          <li>ArizonaLandDeals.com</li>
+          <li>TucsonHomes.com</li>
+          <li>AZPropertySales.com</li>
+        </ul>
       </div>
-
       <div class="domain-group" id="utah">
-        <div class="domain-item"><a href="http://SaltLakeHomeHub.com" target="_blank" rel="noopener noreferrer">SaltLakeHomeHub.com</a></div>
+        <ul>
+          <li>UtahHomes.com</li>
+          <li>SaltLakeRealEstate.com</li>
+          <li>UtahMountainHomes.com</li>
+          <li>ParkCityProperties.com</li>
+        </ul>
       </div>
-
       <div class="domain-group" id="international">
-        <div class="domain-item"><a href="http://LisbonHomeHub.com" target="_blank" rel="noopener noreferrer">LisbonHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://CapeTownHomeHub.com" target="_blank" rel="noopener noreferrer">CapeTownHomeHub.com</a></div>
+        <ul>
+          <li>GlobalRealEstate.com</li>
+          <li>InternationalProperties.com</li>
+          <li>WorldWideHomes.com</li>
+          <li>GlobalPropertyDeals.com</li>
+        </ul>
       </div>
-
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
-    <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
+    &copy; 2025 CityDomainPro.com — All rights reserved.
   </footer>
 
   <script>
+    // Category button toggle logic
     const buttons = document.querySelectorAll('.category-button');
     const groups = document.querySelectorAll('.domain-group');
 
     buttons.forEach(button => {
       button.addEventListener('click', () => {
-        const target = button.getAttribute('data-target');
+        const targetId = button.getAttribute('data-target');
         groups.forEach(group => {
-          if(group.id === target){
-            if(group.style.display === "block"){
-              group.style.display = "none";
-            } else {
-              group.style.display = "block";
-            }
+          if (group.id === targetId) {
+            group.classList.add('active');
           } else {
-            group.style.display = "none";
+            group.classList.remove('active');
           }
         });
+
+        // Update aria-pressed for accessibility
+        buttons.forEach(btn => btn.setAttribute('aria-pressed', 'false'));
+        button.setAttribute('aria-pressed', 'true');
       });
     });
-  </script>
 
+    // Optionally, activate first category by default
+    if(buttons.length > 0) {
+      buttons[0].click();
+    }
+  </script>
 </body>
 </html>
