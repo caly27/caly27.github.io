@@ -154,244 +154,208 @@
       text-decoration: underline;
     }
 
-    /* Domain List Styling */
-    .domain-list {
-      margin-top: 30px;
-    }
-
     /* Category Buttons */
     .category-buttons {
       display: flex;
       justify-content: center;
       gap: 15px;
+      margin: 30px 0 15px 0;
       flex-wrap: wrap;
-      margin-bottom: 20px;
     }
 
     .category-button {
-      cursor: pointer;
-      padding: 12px 25px;
-      font-weight: 700;
-      border-radius: 25px;
+      background: #FFC107;
       border: none;
-      color: white;
+      border-radius: 30px;
+      padding: 10px 25px;
+      color: #4B2E00;
+      font-weight: 700;
       font-size: 1.1em;
-      box-shadow: 0 0 12px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease;
+      cursor: pointer;
+      box-shadow: 0 0 15px #d9a50e;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
       user-select: none;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      background: linear-gradient(145deg, #b8860b, #ffb84d); /* default honey color */
-    }
-    .category-button:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(255, 184, 77, 0.9);
-    }
-    .category-button.active {
-      box-shadow: 0 0 25px 4px #ffb84d;
-      transform: scale(1.1);
     }
 
-    /* Domains container for each group */
-    .domains-group {
-      max-width: 900px;
-      margin: 0 auto 50px;
-      display: none;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 20px;
-      transition: max-height 0.5s ease;
+    .category-button:hover {
+      box-shadow: 0 0 25px #ffca28;
+      transform: scale(1.05);
     }
-    .domains-group.active {
-      display: flex;
+
+    /* Domain List Styling */
+    .domain-list {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      padding: 0 15px;
+    }
+
+    .domain-group {
+      display: none;
+      margin-top: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+      background: #fff8e1;
+      padding: 20px;
+      animation: slideDown 0.4s ease forwards;
     }
 
     .domain-item {
-      flex: 1 1 250px;
-      border-radius: 12px;
-      padding: 20px;
-      color: white;
-      font-weight: 700;
-      box-shadow:
-        0 0 12px rgba(0,0,0,0.2);
-      cursor: pointer;
-      user-select: none;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      text-align: center;
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 1.2em;
+      color: #4B2E00;
+    }
+
+    .domain-item a {
       text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      min-width: 240px;
-      max-width: 260px;
-      line-height: 1.3;
-    }
-    .domain-item h3 {
-      margin-bottom: 8px;
-      font-size: 1.3em;
-      color: white;
-      text-shadow: 0 0 8px rgba(255 255 255 / 0.7);
-    }
-    .domain-item p {
-      font-weight: 400;
-      font-size: 1em;
-      color: white;
-      text-shadow: 0 0 6px rgba(255 255 255 / 0.6);
-    }
-    .domain-item:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 0 20px 6px rgba(255 255 255 / 0.9);
+      color: #4B2E00;
+      transition: color 0.3s ease;
     }
 
-    /* Honey Gem Colors */
-    .honey-amber { background: linear-gradient(145deg, #ffbf00, #ffdb4d); box-shadow: 0 0 20px #ffbf00;}
-    .honey-citrine { background: linear-gradient(145deg, #e4d00a, #f7ea48); box-shadow: 0 0 20px #e4d00a;}
-    .honey-peridot { background: linear-gradient(145deg, #a3c95d, #c9f38e); box-shadow: 0 0 20px #a3c95d;}
-    .honey-topaz { background: linear-gradient(145deg, #ffc87c, #ffe5b4); box-shadow: 0 0 20px #ffc87c;}
-    .honey-turquoise { background: linear-gradient(145deg, #40e0d0, #98f2f0); box-shadow: 0 0 20px #40e0d0;}
-    .honey-amethyst { background: linear-gradient(145deg, #9966cc, #b99bdb); box-shadow: 0 0 20px #9966cc;}
-    .honey-ruby { background: linear-gradient(145deg, #cc0033, #f26e7e); box-shadow: 0 0 20px #cc0033;}
-    .honey-sapphire { background: linear-gradient(145deg, #0f52ba, #4d7be6); box-shadow: 0 0 20px #0f52ba;}
-    .honey-emerald { background: linear-gradient(145deg, #50c878, #94d7a2); box-shadow: 0 0 20px #50c878;}
-    .honey-garnet { background: linear-gradient(145deg, #733635, #a66666); box-shadow: 0 0 20px #733635;}
-    .honey-carnelian { background: linear-gradient(145deg, #b31b1b, #d46b6b); box-shadow: 0 0 20px #b31b1b;}
-    .honey-obsidian { background: linear-gradient(145deg, #3a3a3a, #6b6b6b); box-shadow: 0 0 20px #3a3a3a;}
-    .honey-amber2 { background: linear-gradient(145deg, #ff9f00, #ffcc66); box-shadow: 0 0 20px #ff9f00;}
-    .honey-peridot2 { background: linear-gradient(145deg, #94c11f, #c5f55a); box-shadow: 0 0 20px #94c11f;}
-    .honey-sapphire2 { background: linear-gradient(145deg, #1a3fcb, #6d92ff); box-shadow: 0 0 20px #1a3fcb;}
-    .honey-rose { background: linear-gradient(145deg, #ff6677, #ff8c99); box-shadow: 0 0 20px #ff6677;}
-    .honey-citrine2 { background: linear-gradient(145deg, #f4e500, #fff65a); box-shadow: 0 0 20px #f4e500;}
+    .domain-item a:hover {
+      color: #FFA000;
+      text-shadow: 0 0 5px #ffb300;
+    }
 
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        max-height: 0;
+      }
+      100% {
+        opacity: 1;
+        max-height: 1000px;
+      }
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2.2em;
+      }
+
+      .section-title {
+        font-size: 2em;
+      }
+
+      .highlight-box {
+        padding: 25px;
+      }
+
+      .cta-button {
+        padding: 14px 28px;
+        font-size: 1.1em;
+      }
+
+      .category-buttons {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .domain-list {
+        max-width: 100%;
+        padding: 0 10px;
+      }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>CityDomainPro.com</h1>
-  <p>Premium Real Estate Domains for Agents & Investors</p>
-</header>
+  <header>
+    <h1>CityDomainPro.com — Premium Real Estate Domains</h1>
+    <p>Your hub for top-tier real estate domains and investment opportunities nationwide, from New York to Los Angeles, Miami, and beyond</p>
+  </header>
 
-<section class="highlight-box">
-  <h2 class="section-title">Featured Domains for Real Estate Investors</h2>
-  <ul>
-    <li><a href="#">CityDomainPro.com</a> - Your go-to source for premium, SEO-optimized real estate domains.</li>
-    <li><a href="#">RealEstateDomains.com</a> - Nationwide domains tailored for property agents and investors.</li>
-    <li><a href="#">UrbanHomesHub.com</a> - City-level market domains to boost your real estate business.</li>
-  </ul>
-</section>
+  <section>
+    <h2 class="section-title">Why Choose <span class="nowrap">CityDomainPro.com</span>?</h2>
+    <div class="highlight-box">
+      <p><strong>CityDomainPro.com</strong> offers a curated selection of <strong>premium real estate domains</strong> tailored for both national and city-specific real estate professionals. Whether you're looking to dominate the **New York** market or expand across the country, we have the perfect SEO-friendly domains for your real estate business.</p>
+      <ul>
+        <li>Highly brandable and memorable <strong>real estate domain names</strong></li>
+        <li>Optimized for SEO and generating organic leads</li>
+        <li>Great potential for long-term <strong>investment returns</strong></li>
+      </ul>
+      <a href="mailto:caly.h2727@gmail.com" class="cta-button"><span>Contact Me</span></a>
+    </div>
+  </section>
 
-<section class="highlight-box">
-  <h2 class="section-title">Lease Premium Domains for Real Estate Growth</h2>
-  <ul>
-    <li>Target specific cities and states with exclusive domains designed for maximum SEO impact.</li>
-    <li>Easy lease options available for brokers, agents, and property managers.</li>
-    <li>Increase your online presence and attract qualified buyers faster.</li>
-  </ul>
-</section>
+  <section>
+    <h2 class="section-title">Premium Real Estate Domains</h2>
 
-<div class="domain-list">
-  <div class="category-buttons">
-    <button class="category-button honey-amber active" data-group="us-domains">U.S. Domains</button>
-    <button class="category-button honey-citrine" data-group="uk-domains">U.K. Domains</button>
-    <button class="category-button honey-peridot" data-group="sa-domains">South Africa Domains</button>
-  </div>
+    <div class="category-buttons">
+      <button class="category-button" data-target="california">California</button>
+      <button class="category-button" data-target="texas">Texas</button>
+      <button class="category-button" data-target="florida">Florida</button>
+      <button class="category-button" data-target="arizona">Arizona</button>
+      <button class="category-button" data-target="utah">Utah</button>
+      <button class="category-button" data-target="international">International</button>
+    </div>
 
-  <div id="us-domains" class="domains-group active">
-    <a href="https://SantaBarbaraHomeHub.com" class="domain-item honey-amber" target="_blank" rel="noopener noreferrer">
-      <h3>SantaBarbaraHomeHub.com</h3>
-      <p>Santa Barbara Real Estate Deals</p>
-    </a>
-    <a href="https://StocktonHomeDeals.com" class="domain-item honey-citrine" target="_blank" rel="noopener noreferrer">
-      <h3>StocktonHomeDeals.com</h3>
-      <p>Stockton Property Listings</p>
-    </a>
-    <a href="https://AustinRentBot.com" class="domain-item honey-peridot" target="_blank" rel="noopener noreferrer">
-      <h3>AustinRentBot.com</h3>
-      <p>Austin Rental Listings</p>
-    </a>
-    <a href="https://AustinHomesAI.com" class="domain-item honey-topaz" target="_blank" rel="noopener noreferrer">
-      <h3>AustinHomesAI.com</h3>
-      <p>Austin Homes Listings</p>
-    </a>
-    <a href="https://AustinPropertiesAI.com" class="domain-item honey-turquoise" target="_blank" rel="noopener noreferrer">
-      <h3>AustinPropertiesAI.com</h3>
-      <p>Austin Property Deals</p>
-    </a>
-    <a href="https://PhoenixHomeSpot.com" class="domain-item honey-amethyst" target="_blank" rel="noopener noreferrer">
-      <h3>PhoenixHomeSpot.com</h3>
-      <p>Phoenix Homes for Sale</p>
-    </a>
-    <a href="https://TampaHomeDeals.com" class="domain-item honey-ruby" target="_blank" rel="noopener noreferrer">
-      <h3>TampaHomeDeals.com</h3>
-      <p>Tampa Real Estate</p>
-    </a>
-    <a href="https://SaltLakeHomeHub.com" class="domain-item honey-sapphire" target="_blank" rel="noopener noreferrer">
-      <h3>SaltLakeHomeHub.com</h3>
-      <p>Salt Lake Real Estate</p>
-    </a>
-    <a href="https://PrincetonTXHomes.com" class="domain-item honey-emerald" target="_blank" rel="noopener noreferrer">
-      <h3>PrincetonTXHomes.com</h3>
-      <p>Princeton TX Property</p>
-    </a>
-    <a href="https://PrincetonTexasHomes.com" class="domain-item honey-garnet" target="_blank" rel="noopener noreferrer">
-      <h3>PrincetonTexasHomes.com</h3>
-      <p>Princeton Texas Property</p>
-    </a>
-    <a href="https://CostaMesaHomeDeals.com" class="domain-item honey-carnelian" target="_blank" rel="noopener noreferrer">
-      <h3>CostaMesaHomeDeals.com</h3>
-      <p>Costa Mesa Listings</p>
-    </a>
-    <a href="https://BakersfieldHomeHub.com" class="domain-item honey-obsidian" target="_blank" rel="noopener noreferrer">
-      <h3>BakersfieldHomeHub.com</h3>
-      <p>Bakersfield Real Estate</p>
-    </a>
-    <a href="https://IrvinePropertiesAI.com" class="domain-item honey-amber2" target="_blank" rel="noopener noreferrer">
-      <h3>IrvinePropertiesAI.com</h3>
-      <p>Irvine Property Hub</p>
-    </a>
-    <a href="https://PasadenaHomeDeals.com" class="domain-item honey-peridot2" target="_blank" rel="noopener noreferrer">
-      <h3>PasadenaHomeDeals.com</h3>
-      <p>Pasadena Listings</p>
-    </a>
-  </div>
+    <div class="domain-list">
 
-  <div id="uk-domains" class="domains-group">
-    <a href="https://LisbonHomeHub.com" class="domain-item honey-sapphire2" target="_blank" rel="noopener noreferrer">
-      <h3>LisbonHomeHub.com</h3>
-      <p>Lisbon Property Deals</p>
-    </a>
-  </div>
+      <div class="domain-group" id="california">
+        <div class="domain-item"><a href="http://SantaBarbaraHomeHub.com" target="_blank" rel="noopener noreferrer">SantaBarbaraHomeHub.com</a></div>
+        <div class="domain-item"><a href="http://StocktonHomeDeals.com" target="_blank" rel="noopener noreferrer">StocktonHomeDeals.com</a></div>
+        <div class="domain-item"><a href="http://CostaMesaHomeDeals.com" target="_blank" rel="noopener noreferrer">CostaMesaHomeDeals.com</a></div>
+        <div class="domain-item"><a href="http://BakersfieldHomeHub.com" target="_blank" rel="noopener noreferrer">BakersfieldHomeHub.com</a></div>
+        <div class="domain-item"><a href="http://IrvinePropertiesAI.com" target="_blank" rel="noopener noreferrer">IrvinePropertiesAI.com</a></div>
+        <div class="domain-item"><a href="http://PasadenaHomeDeals.com" target="_blank" rel="noopener noreferrer">PasadenaHomeDeals.com</a></div>
+      </div>
 
-  <div id="sa-domains" class="domains-group">
-    <a href="https://CapeTownHomeHub.com" class="domain-item honey-rose" target="_blank" rel="noopener noreferrer">
-      <h3>CapeTownHomeHub.com</h3>
-      <p>Cape Town Properties</p>
-    </a>
-  </div>
-</div>
+      <div class="domain-group" id="texas">
+        <div class="domain-item"><a href="http://AustinRentBot.com" target="_blank" rel="noopener noreferrer">AustinRentBot.com</a></div>
+        <div class="domain-item"><a href="http://AustinHomesAi.com" target="_blank" rel="noopener noreferrer">AustinHomesAI.com</a></div>
+        <div class="domain-item"><a href="http://AustinPropertiesAi.com" target="_blank" rel="noopener noreferrer">AustinPropertiesAI.com</a></div>
+        <div class="domain-item"><a href="http://PrincetonTXHomes.com" target="_blank" rel="noopener noreferrer">PrincetonTXHomes.com</a></div>
+        <div class="domain-item"><a href="http://PrincetonTexasHomes.com" target="_blank" rel="noopener noreferrer">PrincetonTexasHomes.com</a></div>
+      </div>
 
-<footer>
-  &copy; 2025 CityDomainPro.com — Premium Real Estate Domains. All rights reserved.
-</footer>
+      <div class="domain-group" id="florida">
+        <div class="domain-item"><a href="http://TampaHomeDeals.com" target="_blank" rel="noopener noreferrer">TampaHomeDeals.com</a></div>
+      </div>
 
-<script>
-  // Toggle domain groups when category buttons clicked
-  const buttons = document.querySelectorAll('.category-button');
-  const groups = document.querySelectorAll('.domains-group');
+      <div class="domain-group" id="arizona">
+        <div class="domain-item"><a href="http://PhoenixHomeSpot.com" target="_blank" rel="noopener noreferrer">PhoenixHomeSpot.com</a></div>
+      </div>
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
-      // Remove active class from all buttons and groups
-      buttons.forEach(btn => btn.classList.remove('active'));
-      groups.forEach(group => group.classList.remove('active'));
+      <div class="domain-group" id="utah">
+        <div class="domain-item"><a href="http://SaltLakeHomeHub.com" target="_blank" rel="noopener noreferrer">SaltLakeHomeHub.com</a></div>
+      </div>
 
-      // Add active to clicked button and respective group
-      button.classList.add('active');
-      const groupId = button.getAttribute('data-group');
-      document.getElementById(groupId).classList.add('active');
+      <div class="domain-group" id="international">
+        <div class="domain-item"><a href="http://LisbonHomeHub.com" target="_blank" rel="noopener noreferrer">LisbonHomeHub.com</a></div>
+        <div class="domain-item"><a href="http://CapeTownHomeHub.com" target="_blank" rel="noopener noreferrer">CapeTownHomeHub.com</a></div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
+    <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
+  </footer>
+
+  <script>
+    const buttons = document.querySelectorAll('.category-button');
+    const groups = document.querySelectorAll('.domain-group');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        const target = button.getAttribute('data-target');
+        groups.forEach(group => {
+          if(group.id === target){
+            if(group.style.display === "block"){
+              group.style.display = "none";
+            } else {
+              group.style.display = "block";
+            }
+          } else {
+            group.style.display = "none";
+          }
+        });
+      });
     });
-  });
-</script>
+  </script>
 
 </body>
 </html>
