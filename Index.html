@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transparent Buttons</title>
+    <style>
+        /* General button style */
+        .btn {
+            padding: 10px 20px;
+            border: 2px solid transparent;  /* Border is transparent */
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;  /* Smooth transition for hover effect */
+        }
+
+        /* Button color with transparent background */
+        .btn-red {
+            background-color: rgba(255, 0, 0, 0.3);  /* Red with 30% opacity */
+            color: black;
+        }
+        .btn-blue {
+            background-color: rgba(0, 0, 255, 0.3);  /* Blue with 30% opacity */
+            color: black;
+        }
+        .btn-green {
+            background-color: rgba(0, 255, 0, 0.3);  /* Green with 30% opacity */
+            color: black;
+        }
+
+        /* Hover effect */
+        .btn:hover {
+            opacity: 1;  /* Make the button solid on hover */
+            transform: scale(1.1);  /* Slightly increase the size */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Buttons with different colors -->
+    <button class="btn btn-red">Red Button</button>
+    <button class="btn btn-blue">Blue Button</button>
+    <button class="btn btn-green">Green Button</button>
+
+</body>
+</html>
