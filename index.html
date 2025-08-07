@@ -1,16 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0YVHF7LWS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-T0YVHF7LWS');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="CityDomainPro.com offers premium real estate domains for investors, agents, and professionals across the U.S. Buy SEO-friendly domains that target national and city-level markets." />
@@ -74,29 +64,111 @@
       letter-spacing: 1.5px;
     }
 
-    /* Domain List Section Styling */
-    .domain-list {
-      display: none; /* Hidden by default */
+    /* Highlight Box */
+    .highlight-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      margin-bottom: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .highlight-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .highlight-box ul {
+      padding-left: 20px;
+    }
+
+    .highlight-box ul li {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .highlight-box a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .highlight-box a:hover {
+      color: #d6336c;
+    }
+
+    /* Call-to-Action Button */
+    .cta-button {
+      background: linear-gradient(145deg, #0066cc, #004f99);
+      color: #fff !important;
+      padding: 18px 35px;
+      border-radius: 6px;
+      font-size: 1.3em;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid #004f99;
+      transition: background 0.3s ease, transform 0.3s ease;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .cta-button span {
+      font-weight: 700;
+      font-size: 1.4em;
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(145deg, #004f99, #003366);
+      transform: scale(1.05);
+    }
+
+    /* Footer Section */
+    footer {
+      background-color: #1A2538;
+      color: white;
+      text-align: center;
       padding: 20px;
-      transition: max-height 0.5s ease;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Domain List Styling */
+    .domain-list {
+      display: none;
+      margin-top: 30px;
       overflow: hidden;
-      border-top: 2px solid #ddd;
-      margin-bottom: 40px;
+      transition: max-height 0.5s ease-out;
     }
 
     .domain-item {
-      background: rgba(255, 165, 0, 0.3); /* Honey translucent */
+      background: #fff;
       border-radius: 8px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 15px;
-      margin-bottom: 15px;
-      transition: transform 0.3s ease;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      padding: 20px;
     }
 
     .domain-item:hover {
       transform: translateY(-8px);
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-      background: rgba(255, 165, 0, 0.5);
+    }
+
+    .domain-link {
+      text-decoration: none;
+      color: inherit;
     }
 
     .domain-item h3 {
@@ -104,6 +176,7 @@
       font-weight: 700;
       color: #333;
       margin-bottom: 10px;
+      text-transform: capitalize;
     }
 
     .domain-item p {
@@ -112,45 +185,52 @@
       margin-bottom: 10px;
     }
 
-    .domain-link {
-      text-decoration: none;
-      color: inherit;
+    .domain-link:hover h3 {
+      color: #0066cc;
     }
 
-    /* Buttons for State Filtering */
-    .state-button {
-      padding: 10px 25px;
-      border-radius: 6px;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin: 10px;
-      border: none;
+    .domain-link:hover p {
+      color: #999;
+    }
+
+    /* Category Button Styling */
+    .category-button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 1.2em;
+      margin: 15px;
+      border-radius: 8px;
       cursor: pointer;
-      background: rgba(255, 165, 0, 0.4); /* Honey-like translucent */
+      transition: background-color 0.3s ease, transform 0.3s ease;
       color: white;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: background 0.3s ease, transform 0.3s ease;
+      text-align: center;
+      text-decoration: none;
     }
 
-    /* Specific Colors for Each Button */
-    .state-button.california { background: rgba(255, 140, 0, 0.6); }
-    .state-button.texas { background: rgba(255, 105, 0, 0.6); }
-    .state-button.florida { background: rgba(255, 175, 0, 0.6); }
-    .state-button.newyork { background: rgba(255, 220, 0, 0.6); }
-    .state-button.arizona { background: rgba(255, 150, 0, 0.6); }
-
-    .state-button:hover {
-      background: rgba(255, 165, 0, 0.8);
+    .category-button:hover {
       transform: scale(1.05);
     }
 
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-      .state-button {
-        width: 100%;
-        padding: 14px;
-      }
+    #california {
+      background: rgba(255, 223, 186, 0.8); /* Honey-like color for California */
     }
+    
+    #texas {
+      background: rgba(255, 210, 150, 0.8); /* Honey-like color for Texas */
+    }
+
+    #florida {
+      background: rgba(255, 189, 128, 0.8); /* Honey-like color for Florida */
+    }
+
+    #newyork {
+      background: rgba(255, 240, 180, 0.8); /* Honey-like color for New York */
+    }
+
+    #arizona {
+      background: rgba(255, 205, 135, 0.8); /* Honey-like color for Arizona */
+    }
+
   </style>
 </head>
 <body>
@@ -169,58 +249,47 @@
         <li>Optimized for SEO and generating organic leads</li>
         <li>Great potential for long-term <strong>investment returns</strong></li>
       </ul>
-      <a href="mailto:caly.h2727@gmail.com" class="cta-button"><span>Contact Me</span></a>
+      <a href="mailto:caly.h2727@gmail.com">Contact Us</a>
     </div>
   </section>
 
-  <section>
-    <h2 class="section-title">Premium Real Estate Domains</h2>
-    <p>Explore a range of highly valuable, SEO-optimized <strong>real estate website domains</strong> that can take your business to the next level. Click to learn more or inquire about purchasing:</p>
-  </section>
+  <!-- Domain Category Buttons -->
+  <div>
+    <button class="category-button" id="california">California</button>
+    <button class="category-button" id="texas">Texas</button>
+    <button class="category-button" id="florida">Florida</button>
+    <button class="category-button" id="newyork">New York</button>
+    <button class="category-button" id="arizona">Arizona</button>
+  </div>
 
-  <!-- Domain Lists (stayed same as previous) -->
+  <!-- Domain Lists -->
+  <div class="domain-list" id="california-list">
+    <div class="domain-item">
+      <h3><a href="https://californiadomains.com">CaliforniaRealEstatePro.com</a></h3>
+      <p>Targeted SEO domain for California real estate investors and professionals.</p>
+    </div>
+    <!-- Add more California domains as per your original list -->
+  </div>
+
+  <!-- Add similar blocks for Texas, Florida, etc. -->
 
   <footer>
-    <div style="text-align:center; margin-bottom: 40px;">
-      <button class="state-button california" onclick="toggleDomains('california')">California</button>
-      <button class="state-button texas" onclick="toggleDomains('texas')">Texas</button>
-      <button class="state-button florida" onclick="toggleDomains('florida')">Florida</button>
-      <button class="state-button newyork" onclick="toggleDomains('newyork')">New York</button>
-      <button class="state-button arizona" onclick="toggleDomains('arizona')">Arizona</button>
-    </div>
+    <p>&copy; 2025 CityDomainPro.com | <a href="#">Privacy Policy</a></p>
   </footer>
 
-  <!-- Domain Lists for Categories -->
-  <div id="california" class="domain-list">
-    <div class="domain-item">
-      <h3>CaliforniaRealEstate.com</h3>
-      <p>Premium SEO real estate domain for California.</p>
-      <a href="https://example.com" class="domain-link">Learn More</a>
-    </div>
-    <!-- Add other California domains here -->
-  </div>
-
-  <div id="texas" class="domain-list">
-    <div class="domain-item">
-      <h3>TexasProperties.com</h3>
-      <p>High-traffic domain targeting Texas real estate market.</p>
-      <a href="https://example.com" class="domain-link">Learn More</a>
-    </div>
-    <!-- Add other Texas domains here -->
-  </div>
-
-  <!-- Other domain sections like Florida, Arizona, etc. -->
-
   <script>
-    function toggleDomains(state) {
-      const domainList = document.getElementById(state);
-      if (domainList.style.display === "block") {
-        domainList.style.display = "none";
-      } else {
-        domainList.style.display = "block";
-      }
-    }
-  </script>
+    document.querySelectorAll('.category-button').forEach(button => {
+      button.addEventListener('click', function () {
+        const state = this.id;
+        const list = document.getElementById(state + '-list');
 
+        if (list.style.display === "none" || list.style.display === "") {
+          list.style.display = "block";
+        } else {
+          list.style.display = "none";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
