@@ -23,7 +23,6 @@
   <title>CityDomainPro.com — Premium Real Estate Domains for Agents & Investors</title>
 
   <style>
-    /* CSS (unchanged from your original, preserved for functionality and responsiveness) */
     *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
@@ -150,30 +149,35 @@
       flex-wrap: wrap;
     }
 
+    /* 🔥 Updated buttons with glow & pop */
     .category-button {
       border: none;
       border-radius: 30px;
-      padding: 12px 25px;
-      font-weight: 700;
-      font-size: 1.1em;
+      padding: 14px 30px;
+      font-weight: 800;
+      font-size: 1.15em;
       cursor: pointer;
       color: #fff;
-      text-shadow: 0 0 4px rgba(0,0,0,0.5);
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      box-shadow: 0 0 15px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      outline: none;
+      border: 2px solid rgba(255,255,255,0.3);
     }
 
     .category-button:hover {
-      transform: scale(1.07);
-      box-shadow: 0 0 18px rgba(0,0,0,0.3);
+      transform: scale(1.1);
+      box-shadow: 0 0 25px rgba(0,0,0,0.35), inset 0 -2px 8px rgba(0,0,0,0.4);
+      filter: brightness(1.1);
     }
 
+    /* Keep your existing gradients */
     .category-button:nth-child(1) { background: linear-gradient(145deg, #f4c542, #e6a600); }
     .category-button:nth-child(2) { background: linear-gradient(145deg, #f28b82, #d7372f); }
-    .category-button:nth-child(3) { background: linear-gradient(145deg, #81c995, #3f9142); }
-    .category-button:nth-child(4) { background: linear-gradient(145deg, #a0c4ff, #3a7bd5); }
+    .category-button:nth-child(3) { background: linear-gradient(145deg, #a0c4ff, #3a7bd5); }
+    .category-button:nth-child(4) { background: linear-gradient(145deg, #ffcc80, #ff9800); }
     .category-button:nth-child(5) { background: linear-gradient(145deg, #eab0ff, #9c27b0); }
-    .category-button:nth-child(6) { background: linear-gradient(145deg, #ffcc80, #ff9800); }
+    .category-button:nth-child(6) { background: linear-gradient(145deg, #81c995, #3f9142); }
 
     .domain-list {
       max-width: 900px;
@@ -256,7 +260,6 @@
     </div>
 
     <div class="domain-list">
-
       <div class="domain-group" id="california">
         <div class="domain-item"><a href="http://SantaBarbaraHomeHub.com">SantaBarbaraHomeHub.com</a></div>
         <div class="domain-item"><a href="http://StocktonHomeDeals.com">StocktonHomeDeals.com</a></div>
@@ -290,7 +293,6 @@
         <div class="domain-item"><a href="http://LisbonHomeHub.com">LisbonHomeHub.com</a></div>
         <div class="domain-item"><a href="http://CapeTownHomeHub.com">CapeTownHomeHub.com</a></div>
       </div>
-
     </div>
   </section>
 
