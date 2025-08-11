@@ -149,11 +149,11 @@
       flex-wrap: wrap;
     }
 
-    /* --- Animated Color Transition for Category Buttons Only (smaller sides, slower effect, press animation) --- */
+    /* --- Animated Color Transition for Category Buttons (SYNCED, shorter sides, slow & smooth) --- */
     .category-button {
       border: none;
       border-radius: 26px;
-      padding: 9px 18px;  /* LESS left/right padding (was 30px, now 18px) */
+      padding: 9px 7px;  /* SHORTER from sides */
       font-weight: 800;
       font-size: 1em;
       cursor: pointer;
@@ -163,14 +163,15 @@
       transition:
         transform 0.18s cubic-bezier(.77,0,.18,1),
         box-shadow 0.18s cubic-bezier(.77,0,.18,1),
-        filter 0.18s cubic-bezier(.77,0,.18,1);
+        filter 0.18s cubic-bezier(.77,0,.18,1),
+        background 2s cubic-bezier(0.77,0,0.18,1);
       outline: none;
       border: 2px solid rgba(255,255,255,0.3);
 
-      /* Animated gradient */
+      /* Animated gradient, fully in sync (no delays) */
       background: linear-gradient(270deg, #3f51b5, #00bcd4, #4caf50, #ff9800, #f44336, #3f51b5);
       background-size: 1200% 1200%;
-      animation: colorShift 13s ease-in-out infinite; /* slowed down from 10s to 13s */
+      animation: colorShift 24s cubic-bezier(0.77,0,0.18,1) infinite;
     }
     .category-button:hover {
       transform: scale(1.08);
@@ -178,15 +179,11 @@
       filter: brightness(1.08);
     }
     .category-button:active {
-      transform: scale(1.0); /* Returns to normal size while pressed */
+      transform: scale(1.0);
       box-shadow: 0 0 10px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3);
       filter: none;
     }
-    .category-button:nth-child(2) { animation-delay: 2s; }
-    .category-button:nth-child(3) { animation-delay: 4s; }
-    .category-button:nth-child(4) { animation-delay: 6s; }
-    .category-button:nth-child(5) { animation-delay: 8s; }
-    .category-button:nth-child(6) { animation-delay: 10s; }
+    /* animation-delay REMOVED for full sync */
 
     @keyframes colorShift {
       0% { background-position: 0% 50%; }
@@ -239,7 +236,7 @@
       .highlight-box { padding: 25px; }
       .cta-button { padding: 14px 28px; font-size: 1.1em; }
       .category-buttons { flex-direction: column; gap: 12px; }
-      .category-button { font-size: 0.95em; padding: 8px 12px; }
+      .category-button { font-size: 0.95em; padding: 8px 4px; }
     }
   </style>
 </head>
