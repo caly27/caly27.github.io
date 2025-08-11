@@ -234,7 +234,8 @@
       100% { opacity: 1; max-height: 1000px; }
     }
 
-    /* Bottom floating buttons (unchanged) */
+    /* Removed bottom floating buttons */
+    /*
     .bottom-buttons-container {
       position: fixed;
       bottom: 24px;
@@ -274,6 +275,7 @@
     .bottom-color-btn:nth-child(3) {
       animation-delay: 6s;
     }
+    */
 
     @media (max-width: 768px) {
       header h1 { font-size: 2.2em; }
@@ -281,11 +283,6 @@
       .highlight-box { padding: 25px; }
       .cta-button { padding: 14px 28px; font-size: 1.1em; }
       .category-buttons { flex-direction: column; gap: 12px; }
-      .bottom-buttons-container {
-        gap: 12px;
-        bottom: 10px;
-      }
-      .bottom-color-btn { padding: 11px 18px; font-size: 1em; }
     }
   </style>
 </head>
@@ -363,13 +360,6 @@
     <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
   </footer>
 
-  <!-- Bottom Animated Buttons -->
-  <div class="bottom-buttons-container" aria-label="Quick actions">
-    <button class="bottom-color-btn" onclick="window.location.href='mailto:caly.h2727@gmail.com'">Contact</button>
-    <button class="bottom-color-btn" onclick="window.location.href='mailto:caly.h2727@gmail.com?subject=Request%20a%20Quote'">Get a Quote</button>
-    <button class="bottom-color-btn" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">All Domains</button>
-  </div>
-
   <script>
     // Category domain section toggler
     const buttons = document.querySelectorAll('.category-button');
@@ -385,19 +375,6 @@
             group.style.display = "none";
           }
         });
-      });
-    });
-
-    // Bottom animated buttons actions (optional: demo, can be customized)
-    document.querySelectorAll('.bottom-color-btn').forEach(btn => {
-      btn.addEventListener('click', e => {
-        if (btn.textContent.includes('Contact')) {
-          window.location.href = 'mailto:caly.h2727@gmail.com';
-        } else if (btn.textContent.includes('Quote')) {
-          window.location.href = 'mailto:caly.h2727@gmail.com?subject=Request%20a%20Quote';
-        } else if (btn.textContent.includes('All Domains')) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
       });
     });
   </script>
