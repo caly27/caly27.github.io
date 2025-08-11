@@ -149,11 +149,12 @@
       flex-wrap: wrap;
     }
 
-    /* --- Animated Color Transition for Category Buttons (SYNCED, smaller sides only, slow & smooth) --- */
+    /* --- CATEGORY BUTTONS: Shorter from sides (minimal horizontal padding, max sync, slow, smooth) --- */
     .category-button {
       border: none;
       border-radius: 26px;
-      padding: 9px 4px;     /* SMALLER from sides only */
+      padding: 9px 2px;    /* <-- This is the key: much less horizontal padding */
+      min-width: 0;        /* Remove min-width to allow shortest possible button */
       font-weight: 800;
       font-size: 1em;
       cursor: pointer;
@@ -167,8 +168,6 @@
         background 2s cubic-bezier(0.77,0,0.18,1);
       outline: none;
       border: 2px solid rgba(255,255,255,0.3);
-
-      /* Animated gradient, fully in sync (no delays) */
       background: linear-gradient(270deg, #3f51b5, #00bcd4, #4caf50, #ff9800, #f44336, #3f51b5);
       background-size: 1200% 1200%;
       animation: colorShift 24s cubic-bezier(0.77,0,0.18,1) infinite;
@@ -235,7 +234,7 @@
       .highlight-box { padding: 25px; }
       .cta-button { padding: 14px 28px; font-size: 1.1em; }
       .category-buttons { flex-direction: column; gap: 12px; }
-      .category-button { font-size: 0.95em; padding: 8px 2px; }
+      .category-button { font-size: 0.95em; padding: 8px 1px; min-width: 0; }
     }
   </style>
 </head>
