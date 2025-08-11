@@ -149,7 +149,7 @@
       flex-wrap: wrap;
     }
 
-    /* 🔥 Updated buttons with smoother, continuous color transitions */
+    /* 🔥 Updated buttons with subtle shine effect (no hover effect) */
     .category-button {
       border: none;
       border-radius: 30px;
@@ -159,60 +159,98 @@
       cursor: pointer;
       color: #fff;
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
-      box-shadow: 0 0 15px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 3s ease-in-out;
+      box-shadow: 0 0 15px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3), 0 0 5px rgba(255,255,255,0.6); /* Added subtle glow */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
       outline: none;
       border: 2px solid rgba(255,255,255,0.3);
-      animation: colorChange 10s infinite alternate; /* Continuous smooth color transition */
     }
 
-    .category-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 25px rgba(0,0,0,0.35), inset 0 -2px 8px rgba(0,0,0,0.4);
-      filter: brightness(1.1);
+    /* Keep your existing gradients */
+    .category-button:nth-child(1) { background: linear-gradient(145deg, #f4c542, #e6a600); }
+    .category-button:nth-child(2) { background: linear-gradient(145deg, #f28b82, #d7372f); }
+    .category-button:nth-child(3) { background: linear-gradient(145deg, #a0c4ff, #3a7bd5); }
+    .category-button:nth-child(4) { background: linear-gradient(145deg, #ffcc80, #ff9800); }
+    .category-button:nth-child(5) { background: linear-gradient(145deg, #eab0ff, #9c27b0); }
+    .category-button:nth-child(6) { background: linear-gradient(145deg, #81c995, #3f9142); }
+
+    .domain-list {
+      max-width: 900px;
+      margin: 0 auto 40px auto;
+      padding: 0 15px;
     }
 
-    /* Keyframes for smooth and continuous color transition */
-    @keyframes colorChange {
-      0% {
-        background: linear-gradient(145deg, #f4c542, #e6a600);
-      }
-      20% {
-        background: linear-gradient(145deg, #ffb842, #e48c00);
-      }
-      40% {
-        background: linear-gradient(145deg, #f3a426, #db7100);
-      }
-      60% {
-        background: linear-gradient(145deg, #f07700, #d35e00);
-      }
-      80% {
-        background: linear-gradient(145deg, #ffb742, #e97e00);
-      }
-      100% {
-        background: linear-gradient(145deg, #f4c542, #e6a600);
-      }
+    .domain-group {
+      display: none;
+      margin-top: 10px;
+      border-radius: 8px;
+      background: #fff8e1;
+      padding: 20px;
+      animation: slideDown 0.4s ease forwards;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    }
+
+    .domain-item {
+      margin-bottom: 12px;
+      font-weight: 600;
+      font-size: 1.2em;
+      color: #4B2E00;
+    }
+
+    .domain-item a {
+      text-decoration: none;
+      color: #4B2E00;
+      transition: color 0.3s ease;
+    }
+
+    .domain-item a:hover {
+      color: #FFA000;
+      text-shadow: 0 0 5px #ffb300;
+    }
+
+    @keyframes slideDown {
+      0% { opacity: 0; max-height: 0; }
+      100% { opacity: 1; max-height: 1000px; }
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 2.2em; }
+      .section-title { font-size: 2em; }
+      .highlight-box { padding: 25px; }
+      .cta-button { padding: 14px 28px; font-size: 1.1em; }
+      .category-buttons { flex-direction: column; gap: 12px; }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>CityDomainPro</h1>
-    <p>Explore premium real estate domains for investors and professionals nationwide.</p>
+    <h1>CityDomainPro.com — Premium Real Estate Domains</h1>
+    <p>Explore our collection of high-quality real estate domains tailored for investors and agents nationwide.</p>
   </header>
 
   <div class="category-buttons">
-    <button class="category-button">Residential</button>
-    <button class="category-button">Commercial</button>
-    <button class="category-button">Investing</button>
-    <button class="category-button">Leasing</button>
-    <button class="category-button">Consulting</button>
-    <button class="category-button">Management</button>
+    <button class="category-button">Buy Domains</button>
+    <button class="category-button">Lease Domains</button>
+    <button class="category-button">SEO Domains</button>
+    <button class="category-button">City Domains</button>
+    <button class="category-button">National Domains</button>
+    <button class="category-button">Premium Domains</button>
+  </div>
+
+  <div class="highlight-box">
+    <h3>Why Choose Us?</h3>
+    <ul>
+      <li>Premium real estate domains</li>
+      <li>SEO-friendly and high-value</li>
+      <li>Exclusive marketplace for agents and investors</li>
+      <li>Nationwide and city-specific listings</li>
+    </ul>
+    <a href="#cta" class="cta-button">Start Your Search</a>
   </div>
 
   <footer>
-    <p>&copy; 2025 CityDomainPro. All rights reserved. | <a href="#">Privacy Policy</a></p>
+    <p>&copy; 2025 CityDomainPro.com | All Rights Reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
   </footer>
 
 </body>
