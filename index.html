@@ -149,7 +149,7 @@
       flex-wrap: wrap;
     }
 
-    /* 🔥 Updated buttons with wider color range */
+    /* 🔥 Updated buttons with smoother, continuous color transitions */
     .category-button {
       border: none;
       border-radius: 30px;
@@ -163,6 +163,7 @@
       transition: transform 0.3s ease, box-shadow 0.3s ease, background 3s ease-in-out;
       outline: none;
       border: 2px solid rgba(255,255,255,0.3);
+      animation: colorChange 10s infinite alternate; /* Continuous smooth color transition */
     }
 
     .category-button:hover {
@@ -171,62 +172,26 @@
       filter: brightness(1.1);
     }
 
-    /* Wider Smooth Color Transitions */
-    .category-button:nth-child(1) {
-      background: linear-gradient(145deg, #f4c542, #e6a600);
-      animation: colorChange1 7s infinite alternate;
-    }
-    .category-button:nth-child(2) {
-      background: linear-gradient(145deg, #f28b82, #d7372f);
-      animation: colorChange2 7s infinite alternate;
-    }
-    .category-button:nth-child(3) {
-      background: linear-gradient(145deg, #a0c4ff, #3a7bd5);
-      animation: colorChange3 7s infinite alternate;
-    }
-    .category-button:nth-child(4) {
-      background: linear-gradient(145deg, #ffcc80, #ff9800);
-      animation: colorChange4 7s infinite alternate;
-    }
-    .category-button:nth-child(5) {
-      background: linear-gradient(145deg, #eab0ff, #9c27b0);
-      animation: colorChange5 7s infinite alternate;
-    }
-    .category-button:nth-child(6) {
-      background: linear-gradient(145deg, #81c995, #3f9142);
-      animation: colorChange6 7s infinite alternate;
-    }
-
-    /* Keyframes for a wider color tone transition */
-    @keyframes colorChange1 {
-      0% { background: linear-gradient(145deg, #f4c542, #e6a600); }
-      50% { background: linear-gradient(145deg, #f8d800, #c67400); }
-      100% { background: linear-gradient(145deg, #ffca00, #e2a200); }
-    }
-    @keyframes colorChange2 {
-      0% { background: linear-gradient(145deg, #f28b82, #d7372f); }
-      50% { background: linear-gradient(145deg, #f0665f, #c1361f); }
-      100% { background: linear-gradient(145deg, #f0a36d, #c22a15); }
-    }
-    @keyframes colorChange3 {
-      0% { background: linear-gradient(145deg, #a0c4ff, #3a7bd5); }
-      50% { background: linear-gradient(145deg, #5f8eec, #376fbb); }
-      100% { background: linear-gradient(145deg, #6997ff, #3e80d3); }
-    }
-    @keyframes colorChange4 {
-      0% { background: linear-gradient(145deg, #ffcc80, #ff9800); }
-      50% { background: linear-gradient(145deg, #ffb74d, #fb8c00); }
-      100% { background: linear-gradient(145deg, #ffab40, #ff6d00); }
-    }
-    @keyframes colorChange5 {
-      0% { background: linear-gradient(145deg, #eab0ff, #9c27b0); }
-      50% { background: linear-gradient(145deg, #f4a4ff, #8e24aa); }
-      100% { background: linear-gradient(145deg, #ff62a4, #e91e63); }
-    }
-    @keyframes colorChange6 {
-      0% { background: linear-gradient(145deg, #81c995, #3f9142); }
-      50% { background: linear-gradient(145deg, #5bc888, #2e6e36); }
-      100% { background: linear-gradient(145deg, #6dbd80, #428b44); }
+    /* Keyframes for smooth and continuous color transition */
+    @keyframes colorChange {
+      0% {
+        background: linear-gradient(145deg, #f4c542, #e6a600);
+      }
+      20% {
+        background: linear-gradient(145deg, #ffb842, #e48c00);
+      }
+      40% {
+        background: linear-gradient(145deg, #f3a426, #db7100);
+      }
+      60% {
+        background: linear-gradient(145deg, #f07700, #d35e00);
+      }
+      80% {
+        background: linear-gradient(145deg, #ffb742, #e97e00);
+      }
+      100% {
+        background: linear-gradient(145deg, #f4c542, #e6a600);
+      }
     }
   </style>
 </head>
@@ -249,6 +214,6 @@
   <footer>
     <p>&copy; 2025 CityDomainPro. All rights reserved. | <a href="#">Privacy Policy</a></p>
   </footer>
-  
+
 </body>
 </html>
