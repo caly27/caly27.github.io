@@ -149,7 +149,7 @@
       flex-wrap: wrap;
     }
 
-    /* 🔥 Updated buttons with color transition */
+    /* 🔥 Updated buttons with wider color range */
     .category-button {
       border: none;
       border-radius: 30px;
@@ -160,7 +160,7 @@
       color: #fff;
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
       box-shadow: 0 0 15px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 2s ease-in-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 3s ease-in-out;
       outline: none;
       border: 2px solid rgba(255,255,255,0.3);
     }
@@ -171,197 +171,84 @@
       filter: brightness(1.1);
     }
 
-    /* Smooth Color Transitions */
+    /* Wider Smooth Color Transitions */
     .category-button:nth-child(1) {
       background: linear-gradient(145deg, #f4c542, #e6a600);
-      animation: colorChange1 5s infinite alternate;
+      animation: colorChange1 7s infinite alternate;
     }
     .category-button:nth-child(2) {
       background: linear-gradient(145deg, #f28b82, #d7372f);
-      animation: colorChange2 5s infinite alternate;
+      animation: colorChange2 7s infinite alternate;
     }
     .category-button:nth-child(3) {
       background: linear-gradient(145deg, #a0c4ff, #3a7bd5);
-      animation: colorChange3 5s infinite alternate;
+      animation: colorChange3 7s infinite alternate;
     }
     .category-button:nth-child(4) {
       background: linear-gradient(145deg, #ffcc80, #ff9800);
-      animation: colorChange4 5s infinite alternate;
+      animation: colorChange4 7s infinite alternate;
     }
     .category-button:nth-child(5) {
       background: linear-gradient(145deg, #eab0ff, #9c27b0);
-      animation: colorChange5 5s infinite alternate;
+      animation: colorChange5 7s infinite alternate;
     }
     .category-button:nth-child(6) {
       background: linear-gradient(145deg, #81c995, #3f9142);
-      animation: colorChange6 5s infinite alternate;
+      animation: colorChange6 7s infinite alternate;
     }
 
-    /* Keyframes for smooth transition */
+    /* Keyframes for a wider color tone transition */
     @keyframes colorChange1 {
       0% { background: linear-gradient(145deg, #f4c542, #e6a600); }
-      100% { background: linear-gradient(145deg, #f1b938, #e69e00); }
+      50% { background: linear-gradient(145deg, #f8d800, #c67400); }
+      100% { background: linear-gradient(145deg, #ffca00, #e2a200); }
     }
     @keyframes colorChange2 {
       0% { background: linear-gradient(145deg, #f28b82, #d7372f); }
-      100% { background: linear-gradient(145deg, #f0756d, #d42e1a); }
+      50% { background: linear-gradient(145deg, #f0665f, #c1361f); }
+      100% { background: linear-gradient(145deg, #f0a36d, #c22a15); }
     }
     @keyframes colorChange3 {
       0% { background: linear-gradient(145deg, #a0c4ff, #3a7bd5); }
-      100% { background: linear-gradient(145deg, #8ab4e6, #367bb0); }
+      50% { background: linear-gradient(145deg, #5f8eec, #376fbb); }
+      100% { background: linear-gradient(145deg, #6997ff, #3e80d3); }
     }
     @keyframes colorChange4 {
       0% { background: linear-gradient(145deg, #ffcc80, #ff9800); }
-      100% { background: linear-gradient(145deg, #ffb74d, #f57c00); }
+      50% { background: linear-gradient(145deg, #ffb74d, #fb8c00); }
+      100% { background: linear-gradient(145deg, #ffab40, #ff6d00); }
     }
     @keyframes colorChange5 {
       0% { background: linear-gradient(145deg, #eab0ff, #9c27b0); }
-      100% { background: linear-gradient(145deg, #d893e6, #8a2189); }
+      50% { background: linear-gradient(145deg, #f4a4ff, #8e24aa); }
+      100% { background: linear-gradient(145deg, #ff62a4, #e91e63); }
     }
     @keyframes colorChange6 {
       0% { background: linear-gradient(145deg, #81c995, #3f9142); }
-      100% { background: linear-gradient(145deg, #6fa57b, #357b34); }
-    }
-
-    .domain-list {
-      max-width: 900px;
-      margin: 0 auto 40px auto;
-      padding: 0 15px;
-    }
-
-    .domain-group {
-      display: none;
-      margin-top: 10px;
-      border-radius: 8px;
-      background: #fff8e1;
-      padding: 20px;
-      animation: slideDown 0.4s ease forwards;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-    }
-
-    .domain-item {
-      margin-bottom: 12px;
-      font-weight: 600;
-      font-size: 1.2em;
-      color: #4B2E00;
-    }
-
-    .domain-item a {
-      text-decoration: none;
-      color: #4B2E00;
-      transition: color 0.3s ease;
-    }
-
-    .domain-item a:hover {
-      color: #FFA000;
-      text-shadow: 0 0 5px #ffb300;
-    }
-
-    @keyframes slideDown {
-      0% { opacity: 0; max-height: 0; }
-      100% { opacity: 1; max-height: 1000px; }
-    }
-
-    @media (max-width: 768px) {
-      header h1 { font-size: 2.2em; }
-      .section-title { font-size: 2em; }
-      .highlight-box { padding: 25px; }
-      .cta-button { padding: 14px 28px; font-size: 1.1em; }
-      .category-buttons { flex-direction: column; gap: 12px; }
+      50% { background: linear-gradient(145deg, #5bc888, #2e6e36); }
+      100% { background: linear-gradient(145deg, #6dbd80, #428b44); }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>CityDomainPro.com — Premium Real Estate Domains</h1>
-    <p>Your hub for top-tier real estate domains and investment opportunities nationwide, from New York to Los Angeles, Miami, and beyond</p>
+    <h1>CityDomainPro</h1>
+    <p>Explore premium real estate domains for investors and professionals nationwide.</p>
   </header>
 
-  <section>
-    <h2 class="section-title">Why Choose CityDomainPro.com?</h2>
-    <div class="highlight-box">
-      <p><strong>CityDomainPro.com</strong> offers a curated selection of <strong>premium real estate domains</strong> tailored for both national and city-specific real estate professionals. Whether you're looking to dominate the <strong>New York</strong> market or expand across the country, we have the perfect SEO-friendly domains for your real estate business.</p>
-      <ul>
-        <li>Highly brandable and memorable <strong>real estate domain names</strong></li>
-        <li>Optimized for SEO and generating organic leads</li>
-        <li>Great potential for long-term <strong>investment returns</strong></li>
-      </ul>
-      <a href="mailto:caly.h2727@gmail.com" class="cta-button"><span>Contact Me</span></a>
-    </div>
-  </section>
-
-  <section>
-    <h2 class="section-title">Premium Real Estate Domains</h2>
-
-    <div class="category-buttons">
-      <button class="category-button" data-target="california">California</button>
-      <button class="category-button" data-target="texas">Texas</button>
-      <button class="category-button" data-target="florida">Florida</button>
-      <button class="category-button" data-target="arizona">Arizona</button>
-      <button class="category-button" data-target="utah">Utah</button>
-      <button class="category-button" data-target="international">International</button>
-    </div>
-
-    <div class="domain-list">
-      <div class="domain-group" id="california">
-        <div class="domain-item"><a href="http://SantaBarbaraHomeHub.com">SantaBarbaraHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://StocktonHomeDeals.com">StocktonHomeDeals.com</a></div>
-        <div class="domain-item"><a href="http://CostaMesaHomeDeals.com">CostaMesaHomeDeals.com</a></div>
-        <div class="domain-item"><a href="http://BakersfieldHomeHub.com">BakersfieldHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://IrvinePropertiesAl.com">IrvinePropertiesAl.com</a></div>
-        <div class="domain-item"><a href="http://PasadenaHomeDeals.com">PasadenaHomeDeals.com</a></div>
-      </div>
-
-      <div class="domain-group" id="texas">
-        <div class="domain-item"><a href="http://AustinRentBot.com">AustinRentBot.com</a></div>
-        <div class="domain-item"><a href="http://AustinHomesAl.com">AustinHomesAl.com</a></div>
-        <div class="domain-item"><a href="http://AustinPropertiesAl.com">AustinPropertiesAl.com</a></div>
-        <div class="domain-item"><a href="http://PrincetonTXHomes.com">PrincetonTXHomes.com</a></div>
-        <div class="domain-item"><a href="http://PrincetonTexasHomes.com">PrincetonTexasHomes.com</a></div>
-      </div>
-
-      <div class="domain-group" id="florida">
-        <div class="domain-item"><a href="http://TampaHomeDeals.com">TampaHomeDeals.com</a></div>
-      </div>
-
-      <div class="domain-group" id="arizona">
-        <div class="domain-item"><a href="http://PhoenixHomeSpot.com">PhoenixHomeSpot.com</a></div>
-      </div>
-
-      <div class="domain-group" id="utah">
-        <div class="domain-item"><a href="http://SaltLakeHomeHub.com">SaltLakeHomeHub.com</a></div>
-      </div>
-
-      <div class="domain-group" id="international">
-        <div class="domain-item"><a href="http://LisbonHomeHub.com">LisbonHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://CapeTownHomeHub.com">CapeTownHomeHub.com</a></div>
-      </div>
-    </div>
-  </section>
+  <div class="category-buttons">
+    <button class="category-button">Residential</button>
+    <button class="category-button">Commercial</button>
+    <button class="category-button">Investing</button>
+    <button class="category-button">Leasing</button>
+    <button class="category-button">Consulting</button>
+    <button class="category-button">Management</button>
+  </div>
 
   <footer>
-    <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
-    <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
+    <p>&copy; 2025 CityDomainPro. All rights reserved. | <a href="#">Privacy Policy</a></p>
   </footer>
-
-  <script>
-    const buttons = document.querySelectorAll('.category-button');
-    const groups = document.querySelectorAll('.domain-group');
-
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const target = button.getAttribute('data-target');
-        groups.forEach(group => {
-          if (group.id === target) {
-            group.style.display = group.style.display === "block" ? "none" : "block";
-          } else {
-            group.style.display = "none";
-          }
-        });
-      });
-    });
-  </script>
-
+  
 </body>
 </html>
