@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ... meta and head content omitted for brevity ... -->
+  <!-- ... meta and head content ... -->
 
   <style>
-    /* ... Unchanged styles above ... */
+    /* ... Unchanged global and layout styles ... */
 
     .category-buttons {
       display: flex;
@@ -14,11 +14,12 @@
       flex-wrap: wrap;
     }
 
-    /* --- Animated Color Transition for Category Buttons (synced, much narrower sides) --- */
+    /* --- Category Buttons: Fully Synced Color Animation, Very Small Sides --- */
     .category-button {
       border: none;
       border-radius: 26px;
-      padding: 9px 5px;  /* MUCH SMALLER horizontal padding */
+      padding: 9px 2px;  /* EVEN SMALLER horizontal padding */
+      min-width: 72px;   /* Ensures enough click area */
       font-weight: 800;
       font-size: 1em;
       cursor: pointer;
@@ -36,8 +37,7 @@
       /* Animated gradient */
       background: linear-gradient(270deg, #3f51b5, #00bcd4, #4caf50, #ff9800, #f44336, #3f51b5);
       background-size: 1200% 1200%;
-      animation: colorShift 18s ease-in-out infinite;
-      /* Remove animation-delay for synchronization */
+      animation: colorShiftSync 18s linear infinite !important; /* Use linear for perfect sync, !important to override */
     }
     .category-button:hover {
       transform: scale(1.08);
@@ -49,15 +49,13 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3);
       filter: none;
     }
-    /* Remove animation-delay: all buttons shift together now */
+    /* Remove all animation-delay for full sync! */
 
-    @keyframes colorShift {
+    @keyframes colorShiftSync {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    /* ... Other styles unchanged ... */
 
     @media (max-width: 768px) {
       header h1 { font-size: 2.2em; }
@@ -65,12 +63,12 @@
       .highlight-box { padding: 25px; }
       .cta-button { padding: 14px 28px; font-size: 1.1em; }
       .category-buttons { flex-direction: column; gap: 12px; }
-      .category-button { font-size: 0.95em; padding: 8px 3px; } /* Even less horizontal padding on mobile */
+      .category-button { font-size: 0.95em; padding: 8px 1px; min-width: 64px; }
     }
   </style>
 </head>
 <body>
-  <!-- ... Unchanged HTML content ... -->
+  <!-- ... HTML content unchanged ... -->
   <section>
     <h2 class="section-title">Premium Real Estate Domains</h2>
     <div class="category-buttons">
