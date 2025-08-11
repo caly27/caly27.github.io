@@ -149,7 +149,7 @@
       flex-wrap: wrap;
     }
 
-    /* 🔥 Updated buttons with glow & pop */
+    /* 🔥 Updated buttons with smooth transition and tone fading */
     .category-button {
       border: none;
       border-radius: 30px;
@@ -160,25 +160,33 @@
       color: #fff;
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
       box-shadow: 0 0 15px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.5s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 1s ease;
       outline: none;
       border: 2px solid rgba(255,255,255,0.3);
     }
 
-    /* Button hover and tone transition */
+    /* Smooth tone transition with color fade */
     .category-button:hover {
       transform: scale(1.1);
       box-shadow: 0 0 25px rgba(0,0,0,0.35), inset 0 -2px 8px rgba(0,0,0,0.4);
-      filter: brightness(1.1);
       animation: toneChange 2s ease infinite alternate;
     }
 
     @keyframes toneChange {
       0% {
-        filter: brightness(1.2);
+        background: linear-gradient(145deg, #f4c542, #e6a600);
+      }
+      25% {
+        background: linear-gradient(145deg, #f28b82, #d7372f);
+      }
+      50% {
+        background: linear-gradient(145deg, #a0c4ff, #3a7bd5);
+      }
+      75% {
+        background: linear-gradient(145deg, #ffcc80, #ff9800);
       }
       100% {
-        filter: brightness(0.8);
+        background: linear-gradient(145deg, #eab0ff, #9c27b0);
       }
     }
 
@@ -214,19 +222,19 @@
     }
 
     .domain-item a {
+      color: #0066cc;
       text-decoration: none;
-      color: #4B2E00;
-      transition: color 0.3s ease;
+      font-weight: 700;
     }
 
     .domain-item a:hover {
-      color: #FFA000;
-      text-shadow: 0 0 5px #ffb300;
+      color: #d6336c;
     }
 
+    /* Button click animation */
     @keyframes slideDown {
-      0% { opacity: 0; max-height: 0; }
-      100% { opacity: 1; max-height: 1000px; }
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
     }
 
     @media (max-width: 768px) {
