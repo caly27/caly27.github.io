@@ -1,14 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag and meta tags unchanged -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0YVHF7LWS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-T0YVHF7LWS');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CityDomainPro.com offers premium real estate domains..." />
+  <meta name="description" content="CityDomainPro.com offers premium real estate domains for investors, agents, and professionals across the U.S. Buy SEO-friendly domains that target national and city-level markets." />
+  <meta name="keywords" content="buy real estate domains, real estate SEO domains, premium domains for real estate, domain leasing for realtors, national real estate domains, top real estate domains, domain names for property investors, SEO domains for realtors, best real estate domains nationwide, buy SEO domains for realtors, national real estate websites" />
+  <meta name="author" content="Carlos" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="City Domain Pro — Premium Real Estate Domains" />
+  <meta property="og:description" content="Explore premium real estate domains for investment opportunities and professional growth, from national domains to city-specific listings." />
+  <meta property="og:image" content="image.jpg" />
+  <meta property="og:url" content="https://CityDomainPro.com" />
   <title>CityDomainPro.com — Premium Real Estate Domains for Agents & Investors</title>
 
   <style>
-    /* Existing styles unchanged... */
+    /* Reset and global styles */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f8fa;
+      color: #333;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #2E3A59, #1A2538);
+      color: white;
+      padding: 80px 20px;
+      text-align: left;
+      border-bottom: 4px solid #1a2538;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 3em;
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: 300;
+      margin-top: 10px;
+    }
+
+    .section-title {
+      font-size: 2.8em;
+      text-align: center;
+      color: #0066cc;
+      margin: 40px 0;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+    }
+
+    .highlight-box {
+      background-color: #fff;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+      margin-bottom: 50px;
+      transition: transform 0.3s ease;
+    }
+
+    .highlight-box:hover {
+      transform: translateY(-8px);
+    }
+
+    .highlight-box ul {
+      padding-left: 20px;
+    }
+
+    .highlight-box ul li {
+      margin-bottom: 15px;
+      font-size: 1.1em;
+      line-height: 1.8;
+    }
+
+    .highlight-box a {
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .highlight-box a:hover {
+      color: #d6336c;
+    }
+
+    .cta-button {
+      background: linear-gradient(145deg, #0066cc, #004f99);
+      color: #fff !important;
+      padding: 18px 35px;
+      border-radius: 6px;
+      font-size: 1.3em;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid #004f99;
+      transition: background 0.3s ease, transform 0.3s ease;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    }
+
+    .cta-button:hover {
+      background: linear-gradient(145deg, #004f99, #003366);
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #1A2538;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
 
     .category-buttons {
       display: flex;
@@ -18,6 +150,7 @@
       flex-wrap: wrap;
     }
 
+    /* Category button styles */
     .category-button {
       border: none;
       border-radius: 30px;
@@ -28,47 +161,14 @@
       color: #fff;
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
       box-shadow: 0 0 15px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
       outline: none;
       border: 2px solid rgba(255,255,255,0.3);
-
-      /* Unified gradient animation setup */
-      background: linear-gradient(145deg, #0066cc 0%, #004f99 100%);
-      background-size: 200% 100%;
-      animation: hueShift 8s ease-in-out infinite alternate;
     }
 
-    .category-button:hover {
-      transform: scale(1.1);
-      box-shadow: 0 0 25px rgba(0,0,0,0.35), inset 0 -2px 8px rgba(0,0,0,0.4);
-      filter: brightness(1.1);
-    }
-
-    @keyframes hueShift {
-      from { background-position: 0% 0%; }
-      to   { background-position: 100% 0%; }
-    }
-
-    /* Rest of your existing CSS (domain list, responsive adjustments, footer, etc.) */
-
-    @media (max-width: 768px) {
-      /* Your current responsive code */
-    }
-  </style>
-</head>
-<body>
-  <!-- Your existing header, sections, domain list, footer, and scripts all remain identical -->
-
-  <!-- Category Buttons -->
-  <div class="category-buttons">
-    <button class="category-button" data-target="california">California</button>
-    <button class="category-button" data-target="texas">Texas</button>
-    <button class="category-button" data-target="florida">Florida</button>
-    <button class="category-button" data-target="arizona">Arizona</button>
-    <button class="category-button" data-target="utah">Utah</button>
-    <button class="category-button" data-target="international">International</button>
-  </div>
-
-  <!-- The rest of your domain groups and JavaScript remain unchanged -->
-</body>
-</html>
+    .category-button:nth-child(1) { background: #f4c542; }
+    .category-button:nth-child(2) { background: #f28b82; }
+    .category-button:nth-child(3) { background: #a0c4ff; }
+    .category-button:nth-child(4) { background: #ff
+::contentReference[oaicite:0]{index=0}
+ 
