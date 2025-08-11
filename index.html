@@ -149,13 +149,13 @@
       flex-wrap: wrap;
     }
 
-    /* --- Animated Color Transition for Category Buttons Only --- */
+    /* --- Animated Color Transition for Category Buttons Only (smaller size) --- */
     .category-button {
       border: none;
-      border-radius: 30px;
-      padding: 14px 30px;
+      border-radius: 26px;
+      padding: 9px 22px;
       font-weight: 800;
-      font-size: 1.15em;
+      font-size: 1em;
       cursor: pointer;
       color: #fff;
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
@@ -170,9 +170,9 @@
       animation: colorShift 10s ease-in-out infinite;
     }
     .category-button:hover {
-      transform: scale(1.1);
+      transform: scale(1.08);
       box-shadow: 0 0 25px rgba(0,0,0,0.35), inset 0 -2px 8px rgba(0,0,0,0.4);
-      filter: brightness(1.1);
+      filter: brightness(1.08);
     }
     .category-button:nth-child(2) { animation-delay: 2s; }
     .category-button:nth-child(3) { animation-delay: 4s; }
@@ -185,15 +185,6 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    /* Removed static gradients for category buttons
-    .category-button:nth-child(1) { background: linear-gradient(145deg, #f4c542, #e6a600); }
-    .category-button:nth-child(2) { background: linear-gradient(145deg, #f28b82, #d7372f); }
-    .category-button:nth-child(3) { background: linear-gradient(145deg, #a0c4ff, #3a7bd5); }
-    .category-button:nth-child(4) { background: linear-gradient(145deg, #ffcc80, #ff9800); }
-    .category-button:nth-child(5) { background: linear-gradient(145deg, #eab0ff, #9c27b0); }
-    .category-button:nth-child(6) { background: linear-gradient(145deg, #81c995, #3f9142); }
-    */
 
     .domain-list {
       max-width: 900px;
@@ -234,14 +225,13 @@
       100% { opacity: 1; max-height: 1000px; }
     }
 
-    /* Removed bottom floating buttons */
-
     @media (max-width: 768px) {
       header h1 { font-size: 2.2em; }
       .section-title { font-size: 2em; }
       .highlight-box { padding: 25px; }
       .cta-button { padding: 14px 28px; font-size: 1.1em; }
       .category-buttons { flex-direction: column; gap: 12px; }
+      .category-button { font-size: 0.95em; padding: 8px 12px; }
     }
   </style>
 </head>
