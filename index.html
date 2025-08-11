@@ -149,7 +149,7 @@
       flex-wrap: wrap;
     }
 
-    /* 🔥 Updated buttons with smooth transition and tone fading */
+    /* 🔥 Updated buttons with color transition */
     .category-button {
       border: none;
       border-radius: 30px;
@@ -160,43 +160,68 @@
       color: #fff;
       text-shadow: 0 2px 4px rgba(0,0,0,0.5);
       box-shadow: 0 0 15px rgba(0,0,0,0.25), inset 0 -2px 5px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background 1s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease, background 2s ease-in-out;
       outline: none;
       border: 2px solid rgba(255,255,255,0.3);
     }
 
-    /* Smooth tone transition with color fade */
     .category-button:hover {
       transform: scale(1.1);
       box-shadow: 0 0 25px rgba(0,0,0,0.35), inset 0 -2px 8px rgba(0,0,0,0.4);
-      animation: toneChange 2s ease infinite alternate;
+      filter: brightness(1.1);
     }
 
-    @keyframes toneChange {
-      0% {
-        background: linear-gradient(145deg, #f4c542, #e6a600);
-      }
-      25% {
-        background: linear-gradient(145deg, #f28b82, #d7372f);
-      }
-      50% {
-        background: linear-gradient(145deg, #a0c4ff, #3a7bd5);
-      }
-      75% {
-        background: linear-gradient(145deg, #ffcc80, #ff9800);
-      }
-      100% {
-        background: linear-gradient(145deg, #eab0ff, #9c27b0);
-      }
+    /* Smooth Color Transitions */
+    .category-button:nth-child(1) {
+      background: linear-gradient(145deg, #f4c542, #e6a600);
+      animation: colorChange1 5s infinite alternate;
+    }
+    .category-button:nth-child(2) {
+      background: linear-gradient(145deg, #f28b82, #d7372f);
+      animation: colorChange2 5s infinite alternate;
+    }
+    .category-button:nth-child(3) {
+      background: linear-gradient(145deg, #a0c4ff, #3a7bd5);
+      animation: colorChange3 5s infinite alternate;
+    }
+    .category-button:nth-child(4) {
+      background: linear-gradient(145deg, #ffcc80, #ff9800);
+      animation: colorChange4 5s infinite alternate;
+    }
+    .category-button:nth-child(5) {
+      background: linear-gradient(145deg, #eab0ff, #9c27b0);
+      animation: colorChange5 5s infinite alternate;
+    }
+    .category-button:nth-child(6) {
+      background: linear-gradient(145deg, #81c995, #3f9142);
+      animation: colorChange6 5s infinite alternate;
     }
 
-    /* Keep your existing gradients */
-    .category-button:nth-child(1) { background: linear-gradient(145deg, #f4c542, #e6a600); }
-    .category-button:nth-child(2) { background: linear-gradient(145deg, #f28b82, #d7372f); }
-    .category-button:nth-child(3) { background: linear-gradient(145deg, #a0c4ff, #3a7bd5); }
-    .category-button:nth-child(4) { background: linear-gradient(145deg, #ffcc80, #ff9800); }
-    .category-button:nth-child(5) { background: linear-gradient(145deg, #eab0ff, #9c27b0); }
-    .category-button:nth-child(6) { background: linear-gradient(145deg, #81c995, #3f9142); }
+    /* Keyframes for smooth transition */
+    @keyframes colorChange1 {
+      0% { background: linear-gradient(145deg, #f4c542, #e6a600); }
+      100% { background: linear-gradient(145deg, #f1b938, #e69e00); }
+    }
+    @keyframes colorChange2 {
+      0% { background: linear-gradient(145deg, #f28b82, #d7372f); }
+      100% { background: linear-gradient(145deg, #f0756d, #d42e1a); }
+    }
+    @keyframes colorChange3 {
+      0% { background: linear-gradient(145deg, #a0c4ff, #3a7bd5); }
+      100% { background: linear-gradient(145deg, #8ab4e6, #367bb0); }
+    }
+    @keyframes colorChange4 {
+      0% { background: linear-gradient(145deg, #ffcc80, #ff9800); }
+      100% { background: linear-gradient(145deg, #ffb74d, #f57c00); }
+    }
+    @keyframes colorChange5 {
+      0% { background: linear-gradient(145deg, #eab0ff, #9c27b0); }
+      100% { background: linear-gradient(145deg, #d893e6, #8a2189); }
+    }
+    @keyframes colorChange6 {
+      0% { background: linear-gradient(145deg, #81c995, #3f9142); }
+      100% { background: linear-gradient(145deg, #6fa57b, #357b34); }
+    }
 
     .domain-list {
       max-width: 900px;
@@ -222,19 +247,19 @@
     }
 
     .domain-item a {
-      color: #0066cc;
       text-decoration: none;
-      font-weight: 700;
+      color: #4B2E00;
+      transition: color 0.3s ease;
     }
 
     .domain-item a:hover {
-      color: #d6336c;
+      color: #FFA000;
+      text-shadow: 0 0 5px #ffb300;
     }
 
-    /* Button click animation */
     @keyframes slideDown {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
+      0% { opacity: 0; max-height: 0; }
+      100% { opacity: 1; max-height: 1000px; }
     }
 
     @media (max-width: 768px) {
