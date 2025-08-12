@@ -87,7 +87,7 @@
       min-width: unset;
       max-width: unset;
       flex: 0 0 auto;
-      padding: 7px 18px;
+      padding: 7px 12px; /* Reduced padding on the sides */
       font-size: 0.98em;
       font-weight: 700;
       border: none;
@@ -206,60 +206,34 @@
     <div class="category-buttons">
       <button class="category-button" data-target="california">California</button>
       <button class="category-button" data-target="texas">Texas</button>
+      <button class="category-button" data-target="new-york">New York</button>
       <button class="category-button" data-target="florida">Florida</button>
-      <button class="category-button" data-target="arizona">Arizona</button>
-      <button class="category-button" data-target="utah">Utah</button>
-      <button class="category-button" data-target="international">International</button>
+      <button class="category-button" data-target="miami">Miami</button>
+      <button class="category-button" data-target="los-angeles">Los Angeles</button>
+      <button class="category-button" data-target="chicago">Chicago</button>
+      <button class="category-button" data-target="dallas">Dallas</button>
     </div>
-    <div class="domain-list">
-      <div class="domain-group" id="california">
-        <div class="domain-item"><a href="http://SantaBarbaraHomeHub.com">SantaBarbaraHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://StocktonHomeDeals.com">StocktonHomeDeals.com</a></div>
-        <div class="domain-item"><a href="http://CostaMesaHomeDeals.com">CostaMesaHomeDeals.com</a></div>
-        <div class="domain-item"><a href="http://BakersfieldHomeHub.com">BakersfieldHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://IrvinePropertiesAl.com">IrvinePropertiesAl.com</a></div>
-        <div class="domain-item"><a href="http://PasadenaHomeDeals.com">PasadenaHomeDeals.com</a></div>
-      </div>
-      <div class="domain-group" id="texas">
-        <div class="domain-item"><a href="http://AustinRentBot.com">AustinRentBot.com</a></div>
-        <div class="domain-item"><a href="http://AustinHomesAl.com">AustinHomesAl.com</a></div>
-        <div class="domain-item"><a href="http://AustinPropertiesAl.com">AustinPropertiesAl.com</a></div>
-        <div class="domain-item"><a href="http://PrincetonTXHomes.com">PrincetonTXHomes.com</a></div>
-        <div class="domain-item"><a href="http://PrincetonTexasHomes.com">PrincetonTexasHomes.com</a></div>
-      </div>
-      <div class="domain-group" id="florida">
-        <div class="domain-item"><a href="http://TampaHomeDeals.com">TampaHomeDeals.com</a></div>
-      </div>
-      <div class="domain-group" id="arizona">
-        <div class="domain-item"><a href="http://PhoenixHomeSpot.com">PhoenixHomeSpot.com</a></div>
-      </div>
-      <div class="domain-group" id="utah">
-        <div class="domain-item"><a href="http://SaltLakeHomeHub.com">SaltLakeHomeHub.com</a></div>
-      </div>
-      <div class="domain-group" id="international">
-        <div class="domain-item"><a href="http://LisbonHomeHub.com">LisbonHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://CapeTownHomeHub.com">CapeTownHomeHub.com</a></div>
-      </div>
+    <div id="california" class="domain-group">
+      <div class="domain-item"><a href="https://californiarealestatepro.com">CaliforniaRealEstatePro.com</a></div>
+      <div class="domain-item"><a href="https://californiadreamhomes.com">CaliforniaDreamHomes.com</a></div>
     </div>
+    <div id="texas" class="domain-group">
+      <div class="domain-item"><a href="https://texasrealestatepro.com">TexasRealEstatePro.com</a></div>
+      <div class="domain-item"><a href="https://texasdreamhomes.com">TexasDreamHomes.com</a></div>
+    </div>
+    <!-- Add more domain groups here if needed -->
   </section>
   <footer>
-    <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
-    <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
+    <p>© 2025 CityDomainPro.com. All rights reserved. <a href="#">Privacy Policy</a></p>
   </footer>
+
   <script>
-    // Category domain section toggler
+    // Simple script to toggle the domain lists
     const buttons = document.querySelectorAll('.category-button');
-    const groups = document.querySelectorAll('.domain-group');
     buttons.forEach(button => {
       button.addEventListener('click', () => {
-        const target = button.getAttribute('data-target');
-        groups.forEach(group => {
-          if (group.id === target) {
-            group.style.display = group.style.display === "block" ? "none" : "block";
-          } else {
-            group.style.display = "none";
-          }
-        });
+        const target = document.getElementById(button.dataset.target);
+        target.style.display = target.style.display === 'block' ? 'none' : 'block';
       });
     });
   </script>
