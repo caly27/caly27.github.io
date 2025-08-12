@@ -1,21 +1,29 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CityDomainPro.com — Premium Real Estate Domains for Agents & Investors</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityDomainPro.com — Premium Real Estate & AI Domains for Agents & Investors</title>
   <style>
     body {
       font-family: 'Roboto', sans-serif;
-      background-color: #1a1f2e;
-      color: #e0e6ed;
+      background: linear-gradient(to bottom, 
+        #f8fafc 0%,
+        #e2e8f0 15%,
+        #cbd5e1 30%,
+        #94a3b8 50%,
+        #64748b 70%,
+        #475569 85%,
+        #334155 100%);
+      min-height: 100vh;
+      color: #1e293b;
     }
     header {
-      background: linear-gradient(135deg, #2E3A59, #1A2538);
-      color: white;
+      background: linear-gradient(135deg, #ffffff, #f1f5f9);
+      color: #1e293b;
       padding: 60px 20px;
       text-align: center;
-      border-bottom: 4px solid #1a2538;
+      border-bottom: 4px solid #e2e8f0;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     }
     header h1 {
       font-size: 2.8em;
@@ -33,21 +41,21 @@
     .section-title {
       font-size: 2em;
       text-align: center;
-      color: #64b5f6;
+      color: #1e40af;
       margin: 40px 0 20px 0;
       font-weight: 600;
       letter-spacing: 1.5px;
     }
     .highlight-box {
-      background-color: #263248;
+      background: linear-gradient(135deg, #ffffff, #f8fafc);
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
       margin-bottom: 50px;
       max-width: 700px;
       margin-left: auto;
       margin-right: auto;
-      border: 1px solid #37474f;
+      border: 1px solid #e2e8f0;
     }
     .highlight-box ul {
       padding-left: 20px;
@@ -56,19 +64,19 @@
       margin-bottom: 10px;
       font-size: 1.05em;
       line-height: 1.7;
-      color: #cfd8dc;
+      color: #374151;
     }
     .highlight-box a {
-      color: #64b5f6;
+      color: #1e40af;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
     .highlight-box p {
-      color: #cfd8dc;
+      color: #374151;
     }
     .cta-button {
-      background: linear-gradient(145deg, #0066cc, #004f99);
+      background: linear-gradient(145deg, #1e40af, #1d4ed8);
       color: #fff !important;
       padding: 14px 28px;
       border-radius: 6px;
@@ -78,20 +86,24 @@
       display: inline-block;
       text-transform: uppercase;
       letter-spacing: 1px;
-      border: 2px solid #004f99;
+      border: 2px solid #1d4ed8;
       transition: background 0.3s, transform 0.3s;
       text-shadow: 0 1px 2px rgba(0,0,0,0.3);
       margin-top: 22px;
     }
     .cta-button:hover {
-      background: linear-gradient(145deg, #004f99, #003366);
+      background: linear-gradient(145deg, #1d4ed8, #1e3a8a);
       transform: scale(1.05);
     }
     /* --- CATEGORY BUTTONS --- */
     .category-section {
       max-width: 900px;
       margin: 0 auto;
-      padding: 0 15px;
+      padding: 40px 15px;
+      background: rgba(15, 23, 42, 0.7);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     }
     .category-buttons {
       display: flex;
@@ -117,7 +129,7 @@
       color: #fff;
       box-shadow: 0 4px 12px rgba(0,0,0,0.4), inset 0 -2px 5px rgba(0,0,0,0.2);
       cursor: pointer;
-      transition: transform 0.18s, box-shadow 0.18s, filter 0.18s;
+      transition: transform 0.18s ease-out, box-shadow 0.18s ease-out, filter 0.18s ease-out;
       outline: none;
       text-align: center;
       white-space: nowrap;
@@ -127,13 +139,17 @@
     }
     .category-button:hover {
       transform: scale(1.08);
-      box-shadow: 0 0 20px rgba(255,255,255,0.3), inset 0 -2px 8px rgba(0,0,0,0.18);
-      filter: brightness(1.2);
+      box-shadow: 0 0 30px rgba(255,255,255,0.6), inset 0 -2px 8px rgba(0,0,0,0.18);
+      filter: brightness(1.3) saturate(1.2);
     }
     .category-button:active {
       transform: scale(0.98);
       box-shadow: 0 0 6px rgba(0,0,0,0.14), inset 0 -2px 2px rgba(0,0,0,0.13);
       filter: none;
+      transition: transform 0.1s ease-out, box-shadow 0.1s ease-out, filter 0.1s ease-out;
+    }
+    .category-button:not(:active) {
+      transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, filter 0.3s ease-out;
     }
     @keyframes colorShift {
       0% { background-position: 0% 50%; }
@@ -157,12 +173,13 @@
       opacity: 0;
       margin-top: 15px;
       border-radius: 8px;
-      background: #2d3748;
+      background: rgba(255, 255, 255, 0.9);
       padding: 0 20px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      border: 1px solid #4a5568;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border: 1px solid rgba(255, 255, 255, 0.3);
       overflow: hidden;
       transition: all 0.5s ease;
+      backdrop-filter: blur(5px);
     }
     .domain-group.active {
       max-height: 500px;
@@ -173,16 +190,16 @@
       margin-bottom: 12px;
       font-weight: 600;
       font-size: 1.18em;
-      color: #90cdf4;
+      color: #1e40af;
     }
     .domain-item a {
       text-decoration: none;
-      color: #90cdf4;
+      color: #1e40af;
       transition: color 0.3s;
     }
     .domain-item a:hover {
-      color: #63b3ed;
-      text-shadow: 0 0 8px #4299e1;
+      color: #1d4ed8;
+      text-shadow: 0 0 8px #3b82f6;
     }
     @keyframes slideDown {
       0% { opacity: 0; max-height: 0; padding-top: 0; padding-bottom: 0; }
@@ -196,38 +213,96 @@
       .category-button { font-size: 0.91em; padding: 7px 9px; }
     }
     footer {
-      background-color: #1A2538;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
       color: white;
       text-align: center;
       padding: 20px;
       font-size: 0.9em;
+      margin-top: 40px;
     }
     footer a {
-      color: white;
+      color: #94a3b8;
       text-decoration: none;
+      transition: color 0.3s ease;
     }
     footer a:hover {
+      color: white;
       text-decoration: underline;
+    }
+    /* --- FAQ SECTION --- */
+    .faq-section {
+      background: rgba(15, 23, 42, 0.8);
+      padding: 60px 0;
+      margin-top: 40px;
+    }
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    .faq-item {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      backdrop-filter: blur(10px);
+      overflow: hidden;
+    }
+    .faq-question {
+      background: linear-gradient(135deg, #1e40af, #1d4ed8);
+      color: white;
+      padding: 15px 20px;
+      margin: 0;
+      font-size: 1.1em;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .faq-question:hover {
+      background: linear-gradient(135deg, #1d4ed8, #1e3a8a);
+    }
+    .faq-answer {
+      max-height: 0;
+      opacity: 0;
+      padding: 0 20px;
+      color: #374151;
+      line-height: 1.6;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+    .faq-answer.active {
+      max-height: 200px;
+      opacity: 1;
+      padding: 20px;
+    }
+    .faq-answer p {
+      margin: 0;
+      font-size: 1em;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>CityDomainPro.com — Premium Real Estate Domains</h1>
-    <p>Your hub for top-tier real estate domains and investment opportunities nationwide, from New York to Los Angeles, Miami, and beyond</p>
+    <h1>CityDomainPro.com — Premium Real Estate & AI Domains</h1>
+    <p>Your hub for top-tier real estate domains and cutting-edge AI domain opportunities nationwide, from New York to Los Angeles, Miami, and beyond</p>
   </header>
+
   <section>
     <h2 class="section-title">Why Choose CityDomainPro.com?</h2>
     <div class="highlight-box">
-      <p><strong>CityDomainPro.com</strong> offers a curated selection of <strong>premium real estate domains</strong> tailored for both national and city-specific real estate professionals. Whether you're looking to dominate the <strong>New York</strong> market or expand across the country, we have the perfect SEO-friendly domains for your real estate business.</p>
+      <p><strong>CityDomainPro.com</strong> offers a curated selection of <strong>premium real estate domains</strong> and <strong>innovative AI domain opportunities</strong> tailored for both national and city-specific professionals. Whether you're looking to dominate the <strong>New York</strong> real estate market, capitalize on the AI revolution, or expand across multiple sectors, we have the perfect SEO-friendly domains for your business.</p>
       <ul>
-        <li>Highly brandable and memorable <strong>real estate domain names</strong></li>
-        <li>Optimized for SEO and generating organic leads</li>
-        <li>Great potential for long-term <strong>investment returns</strong></li>
+        <li>Highly brandable and memorable <strong>real estate domain names</strong> and <strong>AI domain portfolios</strong></li>
+        <li><strong>Established traffic flow</strong> with monthly organic visitors already searching for real estate and AI solutions</li>
+        <li>Optimized for SEO and generating organic leads across real estate and technology sectors</li>
+        <li>Great potential for long-term <strong>investment returns</strong> in both traditional and emerging markets</li>
+        <li>Access to <strong>AI-focused domains</strong> positioned for the artificial intelligence boom</li>
       </ul>
-      <a href="mailto:caly.h2727@gmail.com?subject=CityDomainPro Inquiry&body=Hello, I'm interested in learning more about your premium real estate domains." class="cta-button"><span>Contact Me</span></a>
+      <a href="mailto:caly.h2727@gmail.com?subject=CityDomainPro%20Domain%20Inquiry&body=Hello%20Carlos,%0A%0AI'm%20interested%20in%20learning%20more%20about%20your%20premium%20real%20estate%20and%20AI%20domains.%0A%0ASpecifically,%20I'd%20like%20to%20know%20about:%0A-%20Available%20domains%20in%20my%20target%20market%0A-%20Pricing%20and%20leasing%20options%0A-%20Current%20traffic%20numbers%0A%0APlease%20contact%20me%20at%20your%20earliest%20convenience.%0A%0AThank%20you!" class="cta-button">Contact Us Today</a>
     </div>
   </section>
+
   <section>
     <h2 class="section-title">Premium Real Estate Domains</h2>
     <div class="category-section">
@@ -240,60 +315,119 @@
         <button class="category-button" data-target="international">International</button>
       </div>
       <div class="domain-list">
-      <div class="domain-group" id="california">
-        <div class="domain-item"><a href="http://SantaBarbaraHomeHub.com">SantaBarbaraHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://StocktonHomeDeals.com">StocktonHomeDeals.com</a></div>
-        <div class="domain-item"><a href="http://CostaMesaHomeDeals.com">CostaMesaHomeDeals.com</a></div>
-        <div class="domain-item"><a href="http://BakersfieldHomeHub.com">BakersfieldHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://IrvinePropertiesAl.com">IrvinePropertiesAl.com</a></div>
-        <div class="domain-item"><a href="http://PasadenaHomeDeals.com">PasadenaHomeDeals.com</a></div>
-      </div>
-      <div class="domain-group" id="texas">
-        <div class="domain-item"><a href="http://AustinRentBot.com">AustinRentBot.com</a></div>
-        <div class="domain-item"><a href="http://AustinHomesAl.com">AustinHomesAl.com</a></div>
-        <div class="domain-item"><a href="http://AustinPropertiesAl.com">AustinPropertiesAl.com</a></div>
-        <div class="domain-item"><a href="http://PrincetonTXHomes.com">PrincetonTXHomes.com</a></div>
-        <div class="domain-item"><a href="http://PrincetonTexasHomes.com">PrincetonTexasHomes.com</a></div>
-      </div>
-      <div class="domain-group" id="florida">
-        <div class="domain-item"><a href="http://TampaHomeDeals.com">TampaHomeDeals.com</a></div>
-      </div>
-      <div class="domain-group" id="arizona">
-        <div class="domain-item"><a href="http://PhoenixHomeSpot.com">PhoenixHomeSpot.com</a></div>
-      </div>
-      <div class="domain-group" id="utah">
-        <div class="domain-item"><a href="http://SaltLakeHomeHub.com">SaltLakeHomeHub.com</a></div>
-      </div>
-      <div class="domain-group" id="international">
-        <div class="domain-item"><a href="http://LisbonHomeHub.com">LisbonHomeHub.com</a></div>
-        <div class="domain-item"><a href="http://CapeTownHomeHub.com">CapeTownHomeHub.com</a></div>
-      </div>
+        <div class="domain-group" id="california">
+          <div class="domain-item"><a href="http://SantaBarbaraHomeHub.com">SantaBarbaraHomeHub.com</a></div>
+          <div class="domain-item"><a href="http://StocktonHomeDeals.com">StocktonHomeDeals.com</a></div>
+          <div class="domain-item"><a href="http://CostaMesaHomeDeals.com">CostaMesaHomeDeals.com</a></div>
+          <div class="domain-item"><a href="http://BakersfieldHomeHub.com">BakersfieldHomeHub.com</a></div>
+          <div class="domain-item"><a href="http://IrvinePropertiesAl.com">IrvinePropertiesAl.com</a></div>
+          <div class="domain-item"><a href="http://PasadenaHomeDeals.com">PasadenaHomeDeals.com</a></div>
+        </div>
+        <div class="domain-group" id="texas">
+          <div class="domain-item"><a href="http://AustinRentBot.com">AustinRentBot.com</a></div>
+          <div class="domain-item"><a href="http://AustinHomesAl.com">AustinHomesAl.com</a></div>
+          <div class="domain-item"><a href="http://AustinPropertiesAl.com">AustinPropertiesAl.com</a></div>
+          <div class="domain-item"><a href="http://PrincetonTXHomes.com">PrincetonTXHomes.com</a></div>
+          <div class="domain-item"><a href="http://PrincetonTexasHomes.com">PrincetonTexasHomes.com</a></div>
+        </div>
+        <div class="domain-group" id="florida">
+          <div class="domain-item"><a href="http://TampaHomeDeals.com">TampaHomeDeals.com</a></div>
+        </div>
+        <div class="domain-group" id="arizona">
+          <div class="domain-item"><a href="http://PhoenixHomeSpot.com">PhoenixHomeSpot.com</a></div>
+        </div>
+        <div class="domain-group" id="utah">
+          <div class="domain-item"><a href="http://SaltLakeHomeHub.com">SaltLakeHomeHub.com</a></div>
+        </div>
+        <div class="domain-group" id="international">
+          <div class="domain-item"><a href="http://LisbonHomeHub.com">LisbonHomeHub.com</a></div>
+          <div class="domain-item"><a href="http://CapeTownHomeHub.com">CapeTownHomeHub.com</a></div>
+        </div>
       </div>
     </div>
   </section>
+
+  <section class="faq-section">
+    <h2 class="section-title" style="color: #e2e8f0;">Frequently Asked Questions</h2>
+    <div class="faq-container">
+      <div class="faq-item">
+        <h3 class="faq-question">Do you offer AI domains for tech companies and startups?</h3>
+        <div class="faq-answer">
+          <p>Yes! We offer premium AI domain opportunities perfect for AI startups, machine learning companies, and automation services. These domains are strategically chosen for their SEO potential and alignment with AI trends, providing the ideal digital foundation for your tech venture.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">What makes these real estate domains valuable for agents and investors?</h3>
+        <div class="faq-answer">
+          <p>Our real estate domains are carefully selected based on location relevance, search volume, and brandability. Each domain represents a prime digital real estate opportunity with existing organic traffic, local market recognition, and SEO advantages that can immediately boost your online presence and lead generation capabilities.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">How do I purchase or lease a domain from your portfolio?</h3>
+        <div class="faq-answer">
+          <p>Simply contact us via email at caly.h2727@gmail.com with your domain interest. We offer flexible purchasing options including outright purchases, lease-to-own agreements, and revenue sharing partnerships. Each domain comes with traffic analytics, SEO metrics, and transfer assistance to ensure a smooth transition.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Do these domains come with existing traffic and SEO benefits?</h3>
+        <div class="faq-answer">
+          <p>Yes! Most of our premium domains already receive monthly organic traffic from users searching for real estate services in their respective markets. This means immediate visibility and potential lead generation from day one, giving you a significant advantage over starting with a brand new domain.</p>
+        </div>
+      </div>
+      <div class="faq-item">
+        <h3 class="faq-question">Can I see traffic statistics and performance data before purchasing?</h3>
+        <div class="faq-answer">
+          <p>Absolutely! We provide detailed analytics including monthly visitors, search rankings, referring domains, and keyword performance data for each domain. This transparency allows you to make informed investment decisions based on real performance metrics.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <footer>
-    <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
-    <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
+    <p>&copy; 2024 CityDomainPro.com - Premium Real Estate & AI Domain Marketplace | <a href="mailto:caly.h2727@gmail.com">Contact: caly.h2727@gmail.com</a></p>
   </footer>
+
   <script>
-    // Category domain section toggler with smooth slide animation
-    const buttons = document.querySelectorAll('.category-button');
-    const groups = document.querySelectorAll('.domain-group');
-    
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        const target = button.getAttribute('data-target');
-        const targetGroup = document.getElementById(target);
-        
-        // Close all other groups
-        groups.forEach(group => {
-          if (group.id !== target) {
+    // Category button functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const categoryButtons = document.querySelectorAll('.category-button');
+      const domainGroups = document.querySelectorAll('.domain-group');
+
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          
+          // Close all domain groups
+          domainGroups.forEach(group => {
             group.classList.remove('active');
+          });
+          
+          // Open the clicked category's domain group
+          const targetGroup = document.getElementById(targetId);
+          if (targetGroup) {
+            targetGroup.classList.add('active');
           }
         });
-        
-        // Toggle the clicked group
-        targetGroup.classList.toggle('active');
+      });
+
+      // FAQ functionality
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', function() {
+          const answer = this.nextElementSibling;
+          const isActive = answer.classList.contains('active');
+          
+          // Close all FAQ answers
+          document.querySelectorAll('.faq-answer').forEach(ans => {
+            ans.classList.remove('active');
+          });
+          
+          // Toggle the clicked answer
+          if (!isActive) {
+            answer.classList.add('active');
+          }
+        });
       });
     });
   </script>
