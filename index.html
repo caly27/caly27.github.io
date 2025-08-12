@@ -400,7 +400,11 @@
 
       categoryButtons.forEach(button => {
         button.addEventListener('click', function() {
-          // Always hide all lists when any button is clicked
+          const targetId = this.getAttribute('data-target');
+          const targetGroup = document.getElementById(targetId);
+          const isCurrentlyActive = this.classList.contains('active');
+          
+          // Always hide all lists first
           domainGroups.forEach(group => {
             group.classList.remove('active');
           });
@@ -409,6 +413,12 @@
           categoryButtons.forEach(btn => {
             btn.classList.remove('active');
           });
+          
+          // If button wasn't active, show its list
+          if (!isCurrentlyActive && targetGroup) {
+            this.classList.add('active');
+            targetGroup.classList.add('active');
+          }
         });
       });
 
