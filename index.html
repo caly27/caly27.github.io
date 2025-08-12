@@ -149,11 +149,11 @@
       flex-wrap: wrap;
     }
 
-    /* --- CATEGORY BUTTONS: Small font, compact look, short sides --- */
+    /* CATEGORY BUTTONS: Small font, compact look, short sides, and full text always visible */
     .category-button {
       border: none;
       border-radius: 26px;
-      padding: 9px 4px;  /* Shorter from sides */
+      padding: 9px 10px;  /* Shorter from sides than default, but wide enough for text */
       font-size: 0.82em; /* Smaller font size */
       font-weight: 800;
       cursor: pointer;
@@ -170,7 +170,10 @@
       background: linear-gradient(270deg, #3f51b5, #00bcd4, #4caf50, #ff9800, #f44336, #3f51b5);
       background-size: 1200% 1200%;
       animation: colorShift 24s cubic-bezier(0.77,0,0.18,1) infinite;
-      white-space: nowrap;
+      white-space: nowrap; /* Prevents wrapping */
+      overflow: visible;   /* Allows full text to show */
+      text-overflow: unset;
+      text-align: center;
     }
     .category-button:hover {
       transform: scale(1.08);
@@ -234,7 +237,7 @@
       .highlight-box { padding: 25px; }
       .cta-button { padding: 14px 28px; font-size: 1.1em; }
       .category-buttons { flex-direction: column; gap: 12px; }
-      .category-button { font-size: 0.75em; padding: 8px 2px; }
+      .category-button { font-size: 0.75em; padding: 8px 6px; }
     }
   </style>
 </head>
