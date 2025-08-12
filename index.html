@@ -144,50 +144,56 @@
     .category-buttons {
       display: flex;
       justify-content: center;
-      gap: 15px;
+      gap: 12px;
       margin: 30px 0 15px 0;
       flex-wrap: wrap;
     }
-
-    /* CATEGORY BUTTONS: V20 style + V21 size */
+    /* SMALL, PILL CATEGORY BUTTONS WITH FULL NAME, NOT STRETCHED */
     .category-button {
       display: inline-block;
+      min-width: 0;
+      max-width: 180px;
+      padding: 7px 18px;
+      font-size: 0.92em;
+      font-weight: 700;
       border: none;
-      border-radius: 26px;
-      padding: 8px 18px;  /* V21 size for compact look */
-      font-size: 0.9em;   /* V21 size */
-      font-weight: 800;
-      cursor: pointer;
-      color: #fff;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+      border-radius: 30px;
       background: linear-gradient(270deg, #3f51b5, #00bcd4, #4caf50, #ff9800, #f44336, #3f51b5);
       background-size: 1200% 1200%;
       animation: colorShift 24s cubic-bezier(0.77,0,0.18,1) infinite;
-      box-shadow: 0 0 10px rgba(0,0,0,0.10), inset 0 -2px 4px rgba(0,0,0,0.12);
-      transition:
-        transform 0.18s cubic-bezier(.77,0,.18,1),
-        box-shadow 0.18s cubic-bezier(.77,0,.18,1),
-        filter 0.18s cubic-bezier(.77,0,.18,1),
-        background 2s cubic-bezier(0.77,0,0.18,1);
-      border: 2px solid rgba(255,255,255,0.3);
-      white-space: nowrap;
+      color: #fff;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.13), inset 0 -2px 5px rgba(0,0,0,0.08);
+      cursor: pointer;
+      transition: transform 0.18s, box-shadow 0.18s, filter 0.18s;
+      outline: none;
       text-align: center;
-      margin: 3px 0;
+      white-space: nowrap;
+      overflow: visible;
+      text-overflow: unset;
+      margin: 0;
     }
     .category-button:hover {
       transform: scale(1.08);
-      box-shadow: 0 0 22px rgba(0,0,0,0.20), inset 0 -2px 8px rgba(0,0,0,0.18);
+      box-shadow: 0 0 15px rgba(0,0,0,0.28), inset 0 -2px 8px rgba(0,0,0,0.18);
       filter: brightness(1.08);
     }
     .category-button:active {
       transform: scale(0.98);
-      box-shadow: 0 0 6px rgba(0,0,0,0.12), inset 0 -2px 2px rgba(0,0,0,0.13);
+      box-shadow: 0 0 6px rgba(0,0,0,0.14), inset 0 -2px 2px rgba(0,0,0,0.13);
       filter: none;
     }
     @keyframes colorShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
+    }
+    @media (max-width: 600px) {
+      .category-button {
+        font-size: 0.85em;
+        max-width: 98vw;
+        padding: 7px 11px;
+      }
+      .category-buttons { gap: 8px; }
     }
 
     .domain-list {
@@ -235,7 +241,7 @@
       .highlight-box { padding: 25px; }
       .cta-button { padding: 14px 28px; font-size: 1.1em; }
       .category-buttons { flex-direction: column; gap: 12px; }
-      .category-button { font-size: 0.85em; padding: 7px 13px; }
+      .category-button { font-size: 0.85em; padding: 7px 11px; }
     }
   </style>
 </head>
@@ -261,7 +267,6 @@
 
   <section>
     <h2 class="section-title">Premium Real Estate Domains</h2>
-
     <div class="category-buttons">
       <button class="category-button" data-target="california">California</button>
       <button class="category-button" data-target="texas">Texas</button>
@@ -270,7 +275,6 @@
       <button class="category-button" data-target="utah">Utah</button>
       <button class="category-button" data-target="international">International</button>
     </div>
-
     <div class="domain-list">
       <div class="domain-group" id="california">
         <div class="domain-item"><a href="http://SantaBarbaraHomeHub.com">SantaBarbaraHomeHub.com</a></div>
