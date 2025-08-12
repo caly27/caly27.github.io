@@ -401,8 +401,10 @@
       categoryButtons.forEach(button => {
         button.addEventListener('click', function() {
           const targetId = this.getAttribute('data-target');
+          const targetGroup = document.getElementById(targetId);
+          const isCurrentlyActive = this.classList.contains('active');
           
-          // Remove active state from all buttons first
+          // Remove active state from all buttons
           categoryButtons.forEach(btn => {
             btn.classList.remove('active');
           });
@@ -412,13 +414,12 @@
             group.classList.remove('active');
           });
           
-          // Add active state to clicked button
-          this.classList.add('active');
-          
-          // Show the selected domain group
-          const targetGroup = document.getElementById(targetId);
-          if (targetGroup) {
-            targetGroup.classList.add('active');
+          // If the button wasn't active, show it; if it was active, keep it hidden (toggle behavior)
+          if (!isCurrentlyActive) {
+            this.classList.add('active');
+            if (targetGroup) {
+              targetGroup.classList.add('active');
+            }
           }
         });
       });
