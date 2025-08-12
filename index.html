@@ -1,147 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-T0YVHF7LWS"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-T0YVHF7LWS');
-  </script>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="CityDomainPro.com offers premium real estate domains for investors, agents, and professionals across the U.S. Buy SEO-friendly domains that target national and city-level markets." />
-  <meta name="keywords" content="buy real estate domains, real estate SEO domains, premium domains for real estate, domain leasing for realtors, national real estate domains, top real estate domains, domain names for property investors, SEO domains for realtors, best real estate domains nationwide, buy SEO domains for realtors, national real estate websites" />
-  <meta name="author" content="Carlos" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="City Domain Pro — Premium Real Estate Domains" />
-  <meta property="og:description" content="Explore premium real estate domains for investment opportunities and professional growth, from national domains to city-specific listings." />
-  <meta property="og:image" content="image.jpg" />
-  <meta property="og:url" content="https://CityDomainPro.com" />
   <title>CityDomainPro.com — Premium Real Estate Domains for Agents & Investors</title>
-
   <style>
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
     body {
       font-family: 'Roboto', sans-serif;
       background-color: #f7f8fa;
       color: #333;
-      line-height: 1.6;
-      font-size: 16px;
     }
-
     header {
       background: linear-gradient(135deg, #2E3A59, #1A2538);
       color: white;
-      padding: 80px 20px;
+      padding: 80px 20px 40px 20px;
       text-align: left;
       border-bottom: 4px solid #1a2538;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     }
-
     header h1 {
-      font-size: 3em;
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
+      font-size: 2.5em;
+      margin-bottom: 16px;
     }
-
-    header p {
-      font-size: 1.2em;
-      font-weight: 300;
-      margin-top: 10px;
-    }
-
     .section-title {
-      font-size: 2.8em;
+      font-size: 2em;
       text-align: center;
       color: #0066cc;
-      margin: 40px 0;
+      margin: 40px 0 20px 0;
       font-weight: 600;
       letter-spacing: 1.5px;
     }
-
     .highlight-box {
       background-color: #fff;
-      padding: 40px;
+      padding: 30px;
       border-radius: 10px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
       margin-bottom: 50px;
-      transition: transform 0.3s ease;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
     }
-
-    .highlight-box:hover {
-      transform: translateY(-8px);
-    }
-
     .highlight-box ul {
       padding-left: 20px;
     }
-
     .highlight-box ul li {
-      margin-bottom: 15px;
-      font-size: 1.1em;
-      line-height: 1.8;
+      margin-bottom: 10px;
+      font-size: 1.05em;
+      line-height: 1.7;
     }
-
     .highlight-box a {
       color: #0066cc;
       text-decoration: none;
       font-weight: 600;
       transition: color 0.3s ease;
     }
-
-    .highlight-box a:hover {
-      color: #d6336c;
-    }
-
     .cta-button {
       background: linear-gradient(145deg, #0066cc, #004f99);
       color: #fff !important;
-      padding: 18px 35px;
+      padding: 14px 28px;
       border-radius: 6px;
-      font-size: 1.3em;
+      font-size: 1.1em;
       font-weight: 700;
       text-decoration: none;
       display: inline-block;
       text-transform: uppercase;
       letter-spacing: 1px;
       border: 2px solid #004f99;
-      transition: background 0.3s ease, transform 0.3s ease;
-      text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+      transition: background 0.3s, transform 0.3s;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+      margin-top: 22px;
     }
-
     .cta-button:hover {
       background: linear-gradient(145deg, #004f99, #003366);
       transform: scale(1.05);
     }
-
-    footer {
-      background-color: #1A2538;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      font-size: 0.9em;
-    }
-
-    footer a {
-      color: white;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    /* --- THE NEW CATEGORY BUTTON STYLES (SMALL, PILL, NOT STRETCHED) --- */
+    /* --- CATEGORY BUTTONS --- */
     .category-buttons {
       display: flex;
       justify-content: center;
@@ -151,10 +83,12 @@
     }
     .category-button {
       display: inline-block;
-      min-width: 0;
-      max-width: 180px;
+      width: auto;
+      min-width: unset;
+      max-width: unset;
+      flex: 0 0 auto;
       padding: 7px 18px;
-      font-size: 0.92em;
+      font-size: 0.98em;
       font-weight: 700;
       border: none;
       border-radius: 30px;
@@ -187,21 +121,18 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-    @media (max-width: 600px) {
+    @media (max-width: 700px) {
       .category-button {
-        font-size: 0.85em;
-        max-width: 98vw;
-        padding: 7px 11px;
+        font-size: 0.93em;
+        padding: 7px 12px;
       }
       .category-buttons { gap: 8px; }
     }
-
     .domain-list {
       max-width: 900px;
       margin: 0 auto 40px auto;
       padding: 0 15px;
     }
-
     .domain-group {
       display: none;
       margin-top: 10px;
@@ -211,47 +142,53 @@
       animation: slideDown 0.4s ease forwards;
       box-shadow: 0 4px 8px rgba(0,0,0,0.05);
     }
-
     .domain-item {
       margin-bottom: 12px;
       font-weight: 600;
-      font-size: 1.2em;
+      font-size: 1.18em;
       color: #4B2E00;
     }
-
     .domain-item a {
       text-decoration: none;
       color: #4B2E00;
-      transition: color 0.3s ease;
+      transition: color 0.3s;
     }
-
     .domain-item a:hover {
       color: #FFA000;
       text-shadow: 0 0 5px #ffb300;
     }
-
     @keyframes slideDown {
       0% { opacity: 0; max-height: 0; }
       100% { opacity: 1; max-height: 1000px; }
     }
-
     @media (max-width: 768px) {
-      header h1 { font-size: 2.2em; }
-      .section-title { font-size: 2em; }
-      .highlight-box { padding: 25px; }
-      .cta-button { padding: 14px 28px; font-size: 1.1em; }
-      .category-buttons { flex-direction: column; gap: 12px; }
-      .category-button { font-size: 0.85em; padding: 7px 11px; }
+      header h1 { font-size: 2em; }
+      .section-title { font-size: 1.3em; }
+      .highlight-box { padding: 14px; }
+      .category-buttons { flex-direction: column; gap: 9px; }
+      .category-button { font-size: 0.91em; padding: 7px 9px; }
+    }
+    footer {
+      background-color: #1A2538;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    footer a {
+      color: white;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>CityDomainPro.com — Premium Real Estate Domains</h1>
     <p>Your hub for top-tier real estate domains and investment opportunities nationwide, from New York to Los Angeles, Miami, and beyond</p>
   </header>
-
   <section>
     <h2 class="section-title">Why Choose CityDomainPro.com?</h2>
     <div class="highlight-box">
@@ -264,7 +201,6 @@
       <a href="mailto:caly.h2727@gmail.com" class="cta-button"><span>Contact Me</span></a>
     </div>
   </section>
-
   <section>
     <h2 class="section-title">Premium Real Estate Domains</h2>
     <div class="category-buttons">
@@ -284,7 +220,6 @@
         <div class="domain-item"><a href="http://IrvinePropertiesAl.com">IrvinePropertiesAl.com</a></div>
         <div class="domain-item"><a href="http://PasadenaHomeDeals.com">PasadenaHomeDeals.com</a></div>
       </div>
-
       <div class="domain-group" id="texas">
         <div class="domain-item"><a href="http://AustinRentBot.com">AustinRentBot.com</a></div>
         <div class="domain-item"><a href="http://AustinHomesAl.com">AustinHomesAl.com</a></div>
@@ -292,36 +227,29 @@
         <div class="domain-item"><a href="http://PrincetonTXHomes.com">PrincetonTXHomes.com</a></div>
         <div class="domain-item"><a href="http://PrincetonTexasHomes.com">PrincetonTexasHomes.com</a></div>
       </div>
-
       <div class="domain-group" id="florida">
         <div class="domain-item"><a href="http://TampaHomeDeals.com">TampaHomeDeals.com</a></div>
       </div>
-
       <div class="domain-group" id="arizona">
         <div class="domain-item"><a href="http://PhoenixHomeSpot.com">PhoenixHomeSpot.com</a></div>
       </div>
-
       <div class="domain-group" id="utah">
         <div class="domain-item"><a href="http://SaltLakeHomeHub.com">SaltLakeHomeHub.com</a></div>
       </div>
-
       <div class="domain-group" id="international">
         <div class="domain-item"><a href="http://LisbonHomeHub.com">LisbonHomeHub.com</a></div>
         <div class="domain-item"><a href="http://CapeTownHomeHub.com">CapeTownHomeHub.com</a></div>
       </div>
     </div>
   </section>
-
   <footer>
     <p>&copy; 2025 CityDomainPro.com. All Rights Reserved.</p>
     <p>Designed by <a href="mailto:caly.h2727@gmail.com">Carlos</a></p>
   </footer>
-
   <script>
     // Category domain section toggler
     const buttons = document.querySelectorAll('.category-button');
     const groups = document.querySelectorAll('.domain-group');
-
     buttons.forEach(button => {
       button.addEventListener('click', () => {
         const target = button.getAttribute('data-target');
@@ -335,6 +263,5 @@
       });
     });
   </script>
-
 </body>
 </html>
